@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:opsz,wght@9..144,800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#120d38; --surface:#191354; --surface-2:#221a6b; --line:rgba(226,232,255,.11);
@@ -143,31 +143,89 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
 .prod p{margin:0;font-size:14px;line-height:1.55;color:var(--fg-2)}
 
 /* ---- personalizador ----------------------------------------------------- */
-.lab{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
-  padding:clamp(20px,3vw,32px);display:grid;gap:clamp(24px,3.5vw,38px)}
-@media(min-width:860px){.lab{grid-template-columns:.95fr 1.05fr;align-items:center}}
-.lab .preview{display:grid;place-items:center;background:
-  radial-gradient(70% 70% at 50% 40%,rgba(216,245,78,.12),transparent 70%);
-  border-radius:16px;padding:18px 0}
-.lab .preview svg{width:min(100%,290px);height:auto;
-  filter:drop-shadow(0 20px 30px rgba(6,4,26,.55))}
+.lab{display:grid;gap:clamp(18px,2.6vw,28px)}
+@media(min-width:940px){.lab{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);align-items:start}}
+.stage .box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(12px,2vw,20px);display:grid;place-items:center;min-height:404px;
+  background-image:radial-gradient(74% 58% at 50% 32%,rgba(216,245,78,.14),transparent 72%)}
+.stage svg{width:min(100%,352px);height:auto}
+.stage .cap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;
+  margin-top:12px;font-size:12px;color:var(--fg-3)}
+.stage .cap b{color:var(--fg-2);font-weight:600}
+@media(min-width:940px){.stage{position:sticky;top:88px}}
+@media(max-width:939px){
+  .stage{position:sticky;top:62px;z-index:6;padding-bottom:12px;background:var(--ink);
+    box-shadow:0 14px 16px -12px rgba(8,5,30,.9)}
+  .stage .box{min-height:0;padding:10px}
+  .stage svg{width:min(60%,200px)}
+  .stage .cap{margin-top:8px;font-size:11px}
+}
+.panelc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(20px,2.6vw,30px)}
 .field{display:flex;flex-direction:column;gap:9px;margin-bottom:20px}
-.field>label{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--fg-3)}
+.field>label:not(.drop),.field>.lbl{font-size:11.5px;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--fg-3)}
 .field input[type=text]{height:48px;padding:0 15px;border-radius:12px;background:var(--ink);
-  border:1px solid var(--line);color:var(--fg);font:inherit;font-size:15px}
+  border:1px solid var(--line);color:var(--fg);font:inherit;font-size:15px;width:100%}
 .field input[type=text]:focus{border-color:var(--lime);outline:none}
+.row2{display:grid;gap:14px}
+@media(min-width:540px){.row2{grid-template-columns:1fr 1fr}}
+.row2 .field{margin-bottom:0}
+.presets{display:flex;flex-wrap:wrap;gap:8px}
+.chip{height:38px;padding:0 14px;border-radius:999px;background:rgba(242,243,251,.05);
+  border:1px solid var(--line);color:var(--fg-2);font:inherit;font-size:13px;font-weight:600;
+  cursor:pointer;transition:border-color .14s,color .14s,background .14s}
+.chip:hover{border-color:var(--lime);color:var(--fg)}
 .swatches{display:flex;flex-wrap:wrap;gap:9px}
-.sw{width:38px;height:38px;border-radius:50%;border:2px solid transparent;cursor:pointer;
-  padding:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);transition:transform .14s}
+.sw{position:relative;width:36px;height:36px;border-radius:50%;border:0;cursor:pointer;padding:0;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);transition:transform .14s,box-shadow .14s}
 .sw:hover{transform:scale(1.08)}
-.sw[aria-pressed=true]{border-color:transparent;transform:scale(1.08);
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.14),0 0 0 2px var(--surface),0 0 0 4px var(--lime)}
+.sw[aria-pressed=true]{transform:scale(1.08);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),0 0 0 2px var(--surface),0 0 0 4px var(--lime)}
+.sw.more{background:conic-gradient(#e2382f,#d8f54e,#3fd08a,#3f9fe0,#a86ff0,#e2382f);overflow:hidden}
+.sw.more input{position:absolute;inset:-6px;width:150%;height:150%;opacity:0;cursor:pointer;
+  border:0;padding:0;background:none}
 .segs{display:flex;flex-wrap:wrap;gap:8px}
-.seg{height:40px;padding:0 15px;border-radius:11px;background:rgba(242,243,251,.05);
+.seg{height:42px;padding:0 15px;border-radius:12px;background:rgba(242,243,251,.05);
   border:1px solid var(--line);color:var(--fg-2);font:inherit;font-size:13.5px;font-weight:600;
   cursor:pointer;transition:border-color .14s,color .14s,background .14s}
+.seg:hover{border-color:rgba(216,245,78,.5)}
 .seg[aria-pressed=true]{background:var(--lime-soft);border-color:var(--lime);color:var(--fg)}
+.seg[data-font=elegante]{font-family:'Fraunces',Georgia,serif;font-weight:800}
+.seg[data-font=fuerte]{font-family:'Archivo Black',sans-serif;font-weight:400}
+.seg[data-font=moderna]{font-family:'Space Grotesk',sans-serif;font-weight:700}
+.drop{display:flex;align-items:center;gap:13px;padding:13px 15px;border-radius:14px;
+  border:1px dashed rgba(242,243,251,.25);background:var(--ink);cursor:pointer;
+  transition:border-color .14s,background .14s;text-align:left;width:100%;font:inherit;color:inherit}
+.drop:hover,.drop.over{border-color:var(--lime);background:var(--lime-soft)}
+.drop .ic{width:40px;height:40px;border-radius:11px;background:var(--lime-soft);color:var(--lime);
+  display:grid;place-items:center;flex:none}
+.drop .ic svg{width:19px;height:19px}
+.drop .tx{min-width:0}
+.drop b{display:block;font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;
+  white-space:nowrap}
+.drop span{font-size:12px;color:var(--fg-3)}
+.drop input{display:none}
+.logorow{display:flex;align-items:center;gap:12px;margin-top:10px}
+.logorow[hidden]{display:none}
+.logorow input[type=range]{flex:1}
+.linkbtn{background:none;border:0;color:var(--fg-3);font:inherit;font-size:12.5px;
+  text-decoration:underline;cursor:pointer;padding:0}
+.linkbtn:hover{color:var(--lime)}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:44px;height:44px;border-radius:12px;background:rgba(242,243,251,.06);
+  border:1px solid var(--line);color:var(--fg);font-size:19px;line-height:1;cursor:pointer}
+.qty button:hover{border-color:var(--lime)}
+.qty input{width:92px;height:44px;text-align:center;border-radius:12px;background:var(--ink);
+  border:1px solid var(--line);color:var(--fg);font:inherit;font-weight:700;font-size:16px}
+.qty .hint{font-size:12.5px;color:var(--fg-3)}
+.summary{border-top:1px solid var(--line);margin-top:4px;padding-top:16px;display:grid;gap:8px}
+.summary div{display:flex;justify-content:space-between;gap:16px;font-size:13.5px}
+.summary dt{color:var(--fg-3)}
+.summary dd{margin:0;color:var(--fg);font-weight:600;text-align:right;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:60%}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.actions .btn{flex:1 1 200px}
 
 /* ---- calculadora -------------------------------------------------------- */
 .calc{display:grid;gap:clamp(22px,3vw,34px)}
@@ -432,63 +490,147 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;bac
   <div class="wrap">
     <div class="shead">
       <span class="eyebrow">Personalizá</span>
-      <h2 class="h2">Probá cómo queda el tuyo.</h2>
-      <p class="lede">Elegí color, escribí lo que va impreso y mirá la vista previa. Cuando te guste,
-        mandanos el detalle por WhatsApp en un toque.</p>
+      <h2 class="h2">Diseñá tu vaso ahora mismo.</h2>
+      <p class="lede">Subí tu logo, elegí color y tipografía, y mirá cómo queda impreso. Después
+        descargás la maqueta o nos la mandás por WhatsApp — sin llamadas ni idas y vueltas.</p>
     </div>
 
     <div class="lab">
-      <div class="preview">
-        <svg viewBox="0 0 220 300" role="img" aria-label="Vista previa del vaso personalizado">
-          <path id="cupBody" d="M40 46h140l-19 216a16 16 0 0 1-16 15H75a16 16 0 0 1-16-15z" fill="#2b2280"></path>
-          <ellipse id="cupRim" cx="110" cy="46" rx="70" ry="14" fill="#382e9c"></ellipse>
-          <ellipse id="cupIn" cx="110" cy="46" rx="60" ry="10" fill="#120d38"></ellipse>
-          <text id="cupL1" x="110" y="160" text-anchor="middle" font-family="Space Grotesk,sans-serif"
-            font-size="26" font-weight="700" fill="#d8f54e">TU MARCA</text>
-          <text id="cupL2" x="110" y="188" text-anchor="middle" font-family="Inter,sans-serif"
-            font-size="13" letter-spacing="2.5" fill="#d8f54e">EVENTO 2026</text>
-        </svg>
+      <div class="stage">
+        <div class="box">
+          <svg id="cup" viewBox="0 56 320 330" role="img" aria-label="Vista previa del vaso personalizado">
+            <defs>
+              <linearGradient id="cylGrad" x1="0" y1="0" x2="1" y2="0"></linearGradient>
+              <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="7"></feGaussianBlur>
+              </filter>
+              <clipPath id="cupClip"><path id="clipBody" d=""></path></clipPath>
+              <path id="p1" d="" fill="none"></path>
+              <path id="p2" d="" fill="none"></path>
+              <clipPath id="logoClip"><rect id="logoClipR" x="0" y="0" width="0" height="0"></rect></clipPath>
+            </defs>
+
+            <ellipse id="drop" cx="160" cy="362" rx="70" ry="10" fill="#05030f" opacity=".55"
+              filter="url(#blur10)"></ellipse>
+            <path id="handle" d="" fill="none" stroke="none" stroke-width="17" stroke-linecap="round"></path>
+            <path id="body" d="" fill="#2b2280"></path>
+
+            <g clip-path="url(#cupClip)">
+              <image id="logoImg" x="0" y="0" width="0" height="0" preserveAspectRatio="xMidYMid meet"></image>
+              <text id="t1" text-anchor="middle"><textPath id="tp1" href="#p1" startOffset="50%"></textPath></text>
+              <text id="t2" text-anchor="middle"><textPath id="tp2" href="#p2" startOffset="50%"></textPath></text>
+              <rect id="cyl" x="0" y="0" width="320" height="400" fill="url(#cylGrad)"></rect>
+            </g>
+
+            <ellipse id="rimOut" cx="160" cy="0" rx="0" ry="0" fill="#382e9c"></ellipse>
+            <ellipse id="rimIn" cx="160" cy="0" rx="0" ry="0" fill="#120d38"></ellipse>
+            <ellipse id="rimHi" cx="160" cy="0" rx="0" ry="0" fill="#fff" opacity=".1"></ellipse>
+            <text id="meas" x="-999" y="-999" visibility="hidden"></text>
+          </svg>
+        </div>
+        <div class="cap">
+          <span>Vista previa en vivo — <b id="capSize">500 ml</b></span>
+          <span id="capPrint">Impresión 1 color</span>
+        </div>
       </div>
 
-      <div>
+      <div class="panelc">
         <div class="field">
-          <label id="lbl-color">Color del vaso</label>
-          <div class="swatches" role="group" aria-labelledby="lbl-color">
-            <button class="sw" type="button" data-body="#2b2280" data-rim="#382e9c" data-in="#120d38" data-ink="#d8f54e" aria-pressed="true" aria-label="Azul noche" style="background:#2b2280"></button>
-            <button class="sw" type="button" data-body="#d8f54e" data-rim="#e9ff86" data-in="#b9d43c" data-ink="#191354" aria-pressed="false" aria-label="Lima" style="background:#d8f54e"></button>
-            <button class="sw" type="button" data-body="#15131f" data-rim="#2a2740" data-in="#000000" data-ink="#f2f3fb" aria-pressed="false" aria-label="Negro" style="background:#15131f"></button>
-            <button class="sw" type="button" data-body="#f2f3fb" data-rim="#ffffff" data-in="#cfd2e6" data-ink="#191354" aria-pressed="false" aria-label="Blanco" style="background:#f2f3fb"></button>
-            <button class="sw" type="button" data-body="#e2382f" data-rim="#f25b52" data-in="#a82119" data-ink="#ffffff" aria-pressed="false" aria-label="Rojo" style="background:#e2382f"></button>
-            <button class="sw" type="button" data-body="#2f9e5a" data-rim="#45bd72" data-in="#1f7141" data-ink="#ffffff" aria-pressed="false" aria-label="Verde" style="background:#2f9e5a"></button>
-            <button class="sw" type="button" data-body="#3f9fe0" data-rim="#63b7ee" data-in="#2b76a9" data-ink="#ffffff" aria-pressed="false" aria-label="Celeste" style="background:#3f9fe0"></button>
-            <button class="sw" type="button" data-body="#e86fa8" data-rim="#f58ebe" data-in="#b34f7f" data-ink="#ffffff" aria-pressed="false" aria-label="Rosa" style="background:#e86fa8"></button>
+          <span class="lbl">Empezá con una idea</span>
+          <div class="presets">
+            <button class="chip" type="button" data-preset="empresa">🏢 Evento de empresa</button>
+            <button class="chip" type="button" data-preset="quince">🎉 Cumple de 15</button>
+            <button class="chip" type="button" data-preset="boliche">🍻 Bar o boliche</button>
+            <button class="chip" type="button" data-preset="casamiento">💍 Casamiento</button>
           </div>
         </div>
 
         <div class="field">
-          <label for="l1">Texto principal</label>
-          <input id="l1" type="text" maxlength="14" value="TU MARCA" placeholder="Tu marca o nombre">
-        </div>
-
-        <div class="field">
-          <label for="l2">Segunda línea</label>
-          <input id="l2" type="text" maxlength="22" value="EVENTO 2026" placeholder="Fecha, lugar o frase">
-        </div>
-
-        <div class="field">
-          <label id="lbl-tam">Tamaño</label>
-          <div class="segs" role="group" aria-labelledby="lbl-tam">
-            <button class="seg" type="button" data-size="330 ml" aria-pressed="false">330 ml</button>
-            <button class="seg" type="button" data-size="500 ml" aria-pressed="true">500 ml</button>
-            <button class="seg" type="button" data-size="1 litro" aria-pressed="false">1 litro</button>
-            <button class="seg" type="button" data-size="Jarra 1 L" aria-pressed="false">Jarra 1 L</button>
+          <span class="lbl">Tamaño</span>
+          <div class="segs" id="sizes" role="group" aria-label="Tamaño del vaso">
+            <button class="seg" type="button" data-size="330" aria-pressed="false">330 ml</button>
+            <button class="seg" type="button" data-size="500" aria-pressed="true">500 ml</button>
+            <button class="seg" type="button" data-size="1000" aria-pressed="false">1 litro</button>
+            <button class="seg" type="button" data-size="jarra" aria-pressed="false">Jarra 1 L</button>
           </div>
         </div>
 
-        <a class="btn btn-wa" id="waDesign" href="https://wa.me/59899284127" target="_blank" rel="noopener">
-          <svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Enviar este diseño por WhatsApp</a>
-        <p class="note">La vista previa es orientativa. El arte final se maqueta y se manda a aprobar
-          antes de imprimir.</p>
+        <div class="row2" style="margin-bottom:20px">
+          <div class="field">
+            <span class="lbl">Color del vaso</span>
+            <div class="swatches" id="cupColors" role="group" aria-label="Color del vaso"></div>
+          </div>
+          <div class="field">
+            <span class="lbl">Color de impresión</span>
+            <div class="swatches" id="inkColors" role="group" aria-label="Color de impresión"></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="lbl">Tu logo</span>
+          <label class="drop" id="drop">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+              stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"></path><path d="m7 9 5-5 5 5"></path>
+              <path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"></path></svg></span>
+            <span class="tx"><b id="dropName">Subí tu logo</b>
+              <span id="dropHint">PNG, JPG o SVG — se ve al instante sobre el vaso</span></span>
+            <input id="logoFile" type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp">
+          </label>
+          <div class="logorow" id="logoRow" hidden>
+            <span class="lbl" style="margin:0">Tamaño</span>
+            <input id="logoSize" type="range" min="50" max="130" value="100" aria-label="Tamaño del logo">
+            <button class="linkbtn" type="button" id="logoDel">Quitar</button>
+          </div>
+        </div>
+
+        <div class="row2" style="margin-bottom:20px">
+          <div class="field">
+            <label for="l1">Texto principal</label>
+            <input id="l1" type="text" maxlength="16" value="TU MARCA" placeholder="Tu marca o nombre">
+          </div>
+          <div class="field">
+            <label for="l2">Segunda línea</label>
+            <input id="l2" type="text" maxlength="26" value="EVENTO 2026" placeholder="Fecha, lugar o frase">
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="lbl">Tipografía</span>
+          <div class="segs" id="fonts" role="group" aria-label="Tipografía">
+            <button class="seg" type="button" data-font="moderna" aria-pressed="true">Moderna</button>
+            <button class="seg" type="button" data-font="elegante" aria-pressed="false">Elegante</button>
+            <button class="seg" type="button" data-font="fuerte" aria-pressed="false">Fuerte</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="lbl">Cantidad</span>
+          <div class="qty">
+            <button type="button" id="qMinus" aria-label="Restar 50 vasos">−</button>
+            <input id="qty" type="text" inputmode="numeric" value="300" aria-label="Cantidad de vasos">
+            <button type="button" id="qPlus" aria-label="Sumar 50 vasos">+</button>
+            <span class="hint">vasos</span>
+          </div>
+        </div>
+
+        <dl class="summary" id="summary">
+          <div><dt>Modelo</dt><dd id="sSize">Vaso 500 ml</dd></div>
+          <div><dt>Color del vaso</dt><dd id="sCup">Azul noche</dd></div>
+          <div><dt>Impresión</dt><dd id="sInk">Lima — 1 color</dd></div>
+          <div><dt>Arte</dt><dd id="sArt">Texto: TU MARCA</dd></div>
+          <div><dt>Cantidad</dt><dd id="sQty">300 vasos</dd></div>
+        </dl>
+
+        <div class="actions">
+          <a class="btn btn-wa" id="waDesign" href="https://wa.me/59899284127" target="_blank" rel="noopener">
+            <svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Pedir presupuesto</a>
+          <button class="btn btn-ghost" type="button" id="dlBtn">
+            <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12"></path>
+              <path d="m7 11 5 5 5-5"></path><path d="M4 20h16"></path></svg>Descargar maqueta</button>
+        </div>
+        <p class="note">La vista previa es orientativa: el arte final se maqueta con tu logo en
+          vectorial y se manda a aprobar antes de imprimir.</p>
       </div>
     </div>
   </div>
@@ -658,46 +800,396 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;bac
 <script>
 (function(){
   /* ---- personalizador ---- */
-  var body=document.getElementById('cupBody'),rim=document.getElementById('cupRim'),
-      inner=document.getElementById('cupIn'),l1=document.getElementById('cupL1'),
-      l2=document.getElementById('cupL2'),i1=document.getElementById('l1'),
-      i2=document.getElementById('l2'),wa=document.getElementById('waDesign'),
-      sws=[].slice.call(document.querySelectorAll('.sw')),
-      segs=[].slice.call(document.querySelectorAll('.seg')),
-      color='Azul noche',size='500 ml';
+  var CX=160, BOT=352, WA='https://wa.me/59899284127?text=';
 
-  function waLink(){
-    var t='Hola Tuvaso! Diseñé un vaso en la web:\n'+
-          '• Tamaño: '+size+'\n'+
-          '• Color: '+color+'\n'+
-          '• Texto 1: '+(i1.value||'—')+'\n'+
-          '• Texto 2: '+(i2.value||'—')+'\n'+
-          '¿Me pasan presupuesto?';
-    wa.href='https://wa.me/59899284127?text='+encodeURIComponent(t);
+  var SIZES={
+    '330'  :{top:150,bot:116,h:182,label:'Vaso 330 ml',short:'330 ml'},
+    '500'  :{top:158,bot:116,h:224,label:'Vaso 500 ml',short:'500 ml'},
+    '1000' :{top:186,bot:132,h:258,label:'Vaso 1 litro',short:'1 litro'},
+    'jarra':{top:178,bot:134,h:242,label:'Jarra 1 L',short:'Jarra 1 L',handle:true}
+  };
+  var FONTS={
+    moderna :{fam:"'Space Grotesk',system-ui,sans-serif",wt:700,label:'Moderna'},
+    elegante:{fam:"'Fraunces',Georgia,serif",wt:800,label:'Elegante'},
+    fuerte  :{fam:"'Archivo Black',system-ui,sans-serif",wt:400,label:'Fuerte'}
+  };
+  var CUPS=[['Azul noche','#2b2280'],['Lima','#d8f54e'],['Negro','#15131f'],['Blanco','#f2f3fb'],
+            ['Rojo','#e2382f'],['Verde','#2f9e5a'],['Celeste','#3f9fe0'],['Rosa','#e86fa8']];
+  var INKS=[['Lima','#d8f54e'],['Blanco','#ffffff'],['Negro','#15131f'],['Dorado','#e8c66a'],
+            ['Azul noche','#2b2280'],['Rojo','#e2382f']];
+  var PRESETS={
+    empresa    :{size:'500' ,cup:'#15131f',ink:'#d8f54e',font:'moderna' ,l1:'TU EMPRESA',l2:'FIN DE AÑO 2026',qty:300},
+    quince     :{size:'500' ,cup:'#e86fa8',ink:'#ffffff',font:'elegante',l1:'SOFÍA 15'  ,l2:'12 · 09 · 2026' ,qty:150},
+    boliche    :{size:'1000',cup:'#d8f54e',ink:'#2b2280',font:'fuerte'  ,l1:'LA PREVIA' ,l2:'MVD · VERANO'   ,qty:1000},
+    casamiento :{size:'330' ,cup:'#f2f3fb',ink:'#2b2280',font:'elegante',l1:'ANA & LUIS',l2:'NOS CASAMOS'    ,qty:200}
+  };
+
+  var $=function(id){return document.getElementById(id)};
+  var elBody=$('body'), elClip=$('clipBody'), elHandle=$('handle'), elDrop=$('drop'),
+      elRimO=$('rimOut'), elRimI=$('rimIn'), elRimH=$('rimHi'), elCyl=$('cyl'),
+      elP1=$('p1'), elP2=$('p2'), elT1=$('t1'), elT2=$('t2'), elTp1=$('tp1'), elTp2=$('tp2'),
+      elLogo=$('logoImg'), meas=$('meas'), elSvg=$('cup');
+
+  var st={size:'500',cup:'#2b2280',cupName:'Azul noche',ink:'#d8f54e',inkName:'Lima',
+          font:'moderna',l1:'TU MARCA',l2:'EVENTO 2026',qty:300,logo:null,logoName:'',logoScale:1};
+
+  function lum(hex){
+    var n=parseInt(hex.slice(1),16);
+    function ch(c){c/=255;return c<=.03928?c/12.92:Math.pow((c+.055)/1.055,2.4)}
+    return .2126*ch(n>>16&255)+.7152*ch(n>>8&255)+.0722*ch(n&255);
   }
-  function paint(btn){
-    body.setAttribute('fill',btn.dataset.body);
-    rim.setAttribute('fill',btn.dataset.rim);
-    inner.setAttribute('fill',btn.dataset.in);
-    l1.setAttribute('fill',btn.dataset.ink);
-    l2.setAttribute('fill',btn.dataset.ink);
-    color=btn.getAttribute('aria-label');
-    sws.forEach(function(s){s.setAttribute('aria-pressed',String(s===btn));});
-    waLink();
+  function contrast(a,b){var x=lum(a),y=lum(b);
+    return (Math.max(x,y)+.05)/(Math.min(x,y)+.05);}
+  /* si la tinta elegida no se vería sobre el vaso, la pasamos a blanco o negro */
+  function keepReadable(){
+    if(contrast(st.cup,st.ink)>=1.9)return false;
+    var dark=lum(st.cup)>.4;
+    st.ink=dark?'#15131f':'#ffffff'; st.inkName=dark?'Negro':'Blanco';
+    return true;
   }
-  sws.forEach(function(s){s.addEventListener('click',function(){paint(s);});});
-  segs.forEach(function(s){s.addEventListener('click',function(){
-    segs.forEach(function(o){o.setAttribute('aria-pressed',String(o===s));});
-    size=s.dataset.size;waLink();
-  });});
-  function text(){
-    l1.textContent=(i1.value||'TU MARCA').toUpperCase();
-    l2.textContent=i2.value.toUpperCase();
-    waLink();
+  function shade(hex,p){
+    var n=parseInt(hex.slice(1),16),r=n>>16&255,g=n>>8&255,b=n&255;
+    function m(c){return Math.max(0,Math.min(255,Math.round(p<0?c*(1+p):c+(255-c)*p)))}
+    return '#'+((1<<24)+(m(r)<<16)+(m(g)<<8)+m(b)).toString(16).slice(1);
   }
-  i1.addEventListener('input',text);
-  i2.addEventListener('input',text);
-  waLink();
+  /* el reflejo del cilindro se atenúa en vasos claros para no marcar una banda dura */
+  function gradStops(){
+    var L=lum(st.cup), hi=L>.55?.4:(L>.3?.72:1), sh=L>.55?1.18:1;
+    return [[0,0,.46],[.08,0,.24],[.18,0,.07],[.3,1,.16],[.4,1,.24],[.5,1,.12],
+            [.62,0,.04],[.78,0,.18],[.9,0,.34],[1,0,.5]]
+      .map(function(t){return [t[0],t[1]?'#ffffff':'#000000',+(t[2]*(t[1]?hi:sh)).toFixed(3)];});
+  }
+  function paintGrad(){
+    var g=document.getElementById('cylGrad');
+    g.textContent='';
+    gradStops().forEach(function(t){
+      var e=document.createElementNS('http://www.w3.org/2000/svg','stop');
+      e.setAttribute('offset',t[0]); e.setAttribute('stop-color',t[1]);
+      e.setAttribute('stop-opacity',t[2]); g.appendChild(e);
+    });
+  }
+  function geom(){
+    var s=SIZES[st.size], topY=BOT-s.h, rT=s.top/2, rB=s.bot/2,
+        ryT=rT*0.185, ryB=rB*0.15;
+    var d='M'+(CX-rT)+' '+topY+'L'+(CX-rB)+' '+BOT+
+          'A'+rB+' '+ryB+' 0 0 0 '+(CX+rB)+' '+BOT+
+          'L'+(CX+rT)+' '+topY+
+          'A'+rT+' '+ryT+' 0 0 1 '+(CX-rT)+' '+topY+'Z';
+    return {s:s,topY:topY,rT:rT,rB:rB,ryT:ryT,ryB:ryB,d:d};
+  }
+  function widthAt(g,y){
+    var t=Math.max(0,Math.min(1,(y-g.topY)/g.s.h));
+    return (g.rT+(g.rB-g.rT)*t)*2;
+  }
+  function arc(g,y,frac){
+    var full=widthAt(g,y), w=full*frac, ry=(full/2)*0.185,
+        sag=ry*(1-Math.sqrt(Math.max(0,1-frac*frac)))*1.15;
+    return {d:'M'+(CX-w/2)+' '+y+'Q'+CX+' '+(y+sag*2)+' '+(CX+w/2)+' '+y,
+            w:w,p0:{x:CX-w/2,y:y},pc:{x:CX,y:y+sag*2},p2:{x:CX+w/2,y:y}};
+  }
+  function textWidth(t,fs,fam,wt,ls){
+    meas.setAttribute('font-size',fs);meas.setAttribute('font-family',fam);
+    meas.setAttribute('font-weight',wt);meas.setAttribute('letter-spacing',ls);
+    meas.textContent=t;
+    try{return meas.getComputedTextLength()}catch(e){return t.length*fs*0.6}
+  }
+  function fit(t,fs,fam,wt,ls,max){
+    var w=textWidth(t,fs,fam,wt,ls);
+    return w>max&&w>0?Math.max(8,fs*max/w):fs;
+  }
+
+  /* modelo geométrico común para SVG y canvas */
+  function model(){
+    var g=geom(), f=FONTS[st.font], k=g.rT/79;
+    var bt=g.topY+g.ryT+16, bb=BOT-44, bh=bb-bt;
+    var m={g:g,font:f,lines:[],logo:null};
+    var l1=st.l1.trim(), l2=st.l2.trim(), has=!!st.logo;
+    var y1,y2;
+    if(has){
+      var lh=bh*0.40*st.logoScale, lw=widthAt(g,bt+bh*0.30)*0.62*st.logoScale;
+      m.logo={w:lw,h:lh,x:CX-lw/2,y:bt+bh*0.30-lh/2};
+      y1=bt+bh*(l2?0.76:0.82); y2=y1+24*k;
+    }else{
+      y1=bt+bh*(l2?0.46:0.55); y2=y1+30*k;
+    }
+    if(l1){
+      var a1=arc(g,y1,0.80), fs1=fit(l1,34*k,f.fam,f.wt,0,a1.w*0.96);
+      m.lines.push({t:l1,fs:fs1,ls:0,arc:a1,fam:f.fam,wt:f.wt});
+    }
+    if(l2){
+      var a2=arc(g,y2,0.80), fs2=fit(l2,14*k,f.fam,st.font==='fuerte'?400:600,2.4*k,a2.w*0.94);
+      m.lines.push({t:l2,fs:fs2,ls:2.4*k,arc:a2,fam:f.fam,wt:st.font==='fuerte'?400:600});
+    }
+    return m;
+  }
+
+  function render(){
+    var m=model(), g=m.g;
+    elBody.setAttribute('d',g.d); elClip.setAttribute('d',g.d);
+    elBody.setAttribute('fill',st.cup); paintGrad();
+    elRimO.setAttribute('cy',g.topY); elRimO.setAttribute('rx',g.rT); elRimO.setAttribute('ry',g.ryT);
+    elRimO.setAttribute('fill',shade(st.cup,.2));
+    elRimI.setAttribute('cy',g.topY+1.5); elRimI.setAttribute('rx',g.rT-9);
+    elRimI.setAttribute('ry',Math.max(2,g.ryT-3.5)); elRimI.setAttribute('fill',shade(st.cup,-.55));
+    elRimH.setAttribute('cy',g.topY-1); elRimH.setAttribute('rx',g.rT-4);
+    elRimH.setAttribute('ry',Math.max(1.5,g.ryT-5));
+    elDrop.setAttribute('cy',BOT+9); elDrop.setAttribute('rx',g.rB*1.3);
+
+    if(g.s.handle){
+      var y1=g.topY+g.s.h*0.24, y2=g.topY+g.s.h*0.72;
+      elHandle.setAttribute('d','M'+(CX+g.rT-10)+' '+y1+'C'+(CX+g.rT+62)+' '+y1+','+
+        (CX+g.rT+58)+' '+y2+','+(CX+g.rB-4)+' '+y2);
+      elHandle.setAttribute('stroke',shade(st.cup,-.16));
+    }else{ elHandle.setAttribute('d',''); elHandle.setAttribute('stroke','none'); }
+
+    if(m.logo){
+      elLogo.setAttribute('href',st.logo.src); elLogo.setAttribute('x',m.logo.x);
+      elLogo.setAttribute('y',m.logo.y); elLogo.setAttribute('width',m.logo.w);
+      elLogo.setAttribute('height',m.logo.h); elLogo.style.display='';
+    }else{ elLogo.style.display='none'; }
+
+    [[elT1,elTp1,elP1,m.lines[0]],[elT2,elTp2,elP2,m.lines[1]]].forEach(function(r){
+      var t=r[0],tp=r[1],p=r[2],L=r[3];
+      if(!L){ tp.textContent=''; t.style.display='none'; return; }
+      t.style.display='';
+      p.setAttribute('d',L.arc.d);
+      t.setAttribute('font-family',L.fam); t.setAttribute('font-weight',L.wt);
+      t.setAttribute('font-size',L.fs); t.setAttribute('letter-spacing',L.ls);
+      t.setAttribute('fill',st.ink);
+      tp.textContent=L.t;
+    });
+    sync();
+  }
+
+  /* ---- controles ---- */
+  function swatches(host,list,key,nameKey){
+    list.forEach(function(c){
+      var b=document.createElement('button');
+      b.className='sw'; b.type='button'; b.style.background=c[1];
+      b.setAttribute('aria-label',c[0]); b.dataset.hex=c[1];
+      b.setAttribute('aria-pressed',String(st[key]===c[1]));
+      b.addEventListener('click',function(){
+        st[key]=c[1]; st[nameKey]=c[0];
+        if(key==='cup'&&keepReadable())marks($('inkColors'),'ink');
+        marks(host,key); render(); });
+      host.appendChild(b);
+    });
+    var w=document.createElement('button');
+    w.className='sw more'; w.type='button'; w.setAttribute('aria-label','Otro color');
+    w.innerHTML='<input type="color" value="'+st[key]+'" aria-label="Elegir otro color">';
+    var inp=w.querySelector('input');
+    inp.addEventListener('input',function(){
+      st[key]=inp.value; st[nameKey]=inp.value.toUpperCase();
+      if(key==='cup'&&keepReadable())marks($('inkColors'),'ink');
+      marks(host,key); render(); });
+    host.appendChild(w);
+  }
+  function marks(host,key){
+    [].forEach.call(host.querySelectorAll('.sw'),function(b){
+      b.setAttribute('aria-pressed',String(!b.classList.contains('more')&&b.dataset.hex===st[key]));
+    });
+  }
+  function group(host,attr,key,after){
+    [].forEach.call(host.querySelectorAll('.seg'),function(b){
+      b.addEventListener('click',function(){
+        st[key]=b.dataset[attr];
+        [].forEach.call(host.querySelectorAll('.seg'),function(o){
+          o.setAttribute('aria-pressed',String(o===b));});
+        if(after)after(); render();
+      });
+    });
+  }
+  function groupSync(host,attr,key){
+    [].forEach.call(host.querySelectorAll('.seg'),function(b){
+      b.setAttribute('aria-pressed',String(b.dataset[attr]===st[key]));});
+  }
+
+  swatches($('cupColors'),CUPS,'cup','cupName');
+  swatches($('inkColors'),INKS,'ink','inkName');
+  group($('sizes'),'size','size');
+  group($('fonts'),'font','font');
+
+  var i1=$('l1'), i2=$('l2');
+  i1.addEventListener('input',function(){ st.l1=i1.value.toUpperCase(); render(); });
+  i2.addEventListener('input',function(){ st.l2=i2.value.toUpperCase(); render(); });
+
+  /* logo */
+  var fileIn=$('logoFile'), dropBox=$('drop'), dName=$('dropName'), dHint=$('dropHint'),
+      logoRow=$('logoRow'), logoSize=$('logoSize');
+  function loadFile(f){
+    if(!f||!/^image\//.test(f.type))return;
+    if(f.size>5e6){ dHint.textContent='La imagen pesa más de 5 MB — probá con una más liviana'; return; }
+    var r=new FileReader();
+    r.onload=function(){
+      var img=new Image();
+      img.onload=function(){ st.logo=img; st.logoName=f.name;
+        dName.textContent=f.name; dHint.textContent='Listo — tocá para cambiarlo';
+        logoRow.hidden=false; render(); };
+      img.onerror=function(){ dHint.textContent='No pudimos leer esa imagen'; };
+      img.src=r.result;
+    };
+    r.readAsDataURL(f);
+  }
+  fileIn.addEventListener('change',function(){ loadFile(fileIn.files[0]); });
+  ['dragenter','dragover'].forEach(function(e){
+    dropBox.addEventListener(e,function(ev){ ev.preventDefault(); dropBox.classList.add('over'); });});
+  ['dragleave','drop'].forEach(function(e){
+    dropBox.addEventListener(e,function(ev){ ev.preventDefault(); dropBox.classList.remove('over'); });});
+  dropBox.addEventListener('drop',function(ev){
+    if(ev.dataTransfer&&ev.dataTransfer.files)loadFile(ev.dataTransfer.files[0]); });
+  logoSize.addEventListener('input',function(){ st.logoScale=+logoSize.value/100; render(); });
+  $('logoDel').addEventListener('click',function(ev){
+    ev.preventDefault(); st.logo=null; st.logoName=''; fileIn.value='';
+    dName.textContent='Subí tu logo';
+    dHint.textContent='PNG, JPG o SVG — se ve al instante sobre el vaso';
+    logoRow.hidden=true; render(); });
+
+  /* cantidad */
+  var qty=$('qty');
+  function setQty(n){ st.qty=Math.max(10,Math.min(20000,n||10)); qty.value=st.qty; sync(); }
+  qty.addEventListener('input',function(){ var n=parseInt(qty.value.replace(/\D/g,''),10);
+    st.qty=isNaN(n)?0:n; sync(); });
+  qty.addEventListener('blur',function(){ setQty(st.qty); });
+  $('qMinus').addEventListener('click',function(){ setQty(st.qty-50); });
+  $('qPlus').addEventListener('click',function(){ setQty(st.qty+50); });
+
+  /* presets */
+  [].forEach.call(document.querySelectorAll('.chip[data-preset]'),function(b){
+    b.addEventListener('click',function(){
+      var p=PRESETS[b.dataset.preset];
+      st.size=p.size; st.font=p.font; st.qty=p.qty;
+      st.cup=p.cup; st.cupName=(CUPS.filter(function(c){return c[1]===p.cup})[0]||['',''])[0]||p.cup;
+      st.ink=p.ink; st.inkName=(INKS.filter(function(c){return c[1]===p.ink})[0]||['',''])[0]||p.ink;
+      st.l1=p.l1; st.l2=p.l2; i1.value=p.l1; i2.value=p.l2; qty.value=p.qty;
+      marks($('cupColors'),'cup'); marks($('inkColors'),'ink');
+      groupSync($('sizes'),'size','size'); groupSync($('fonts'),'font','font');
+      render();
+      $('personalizar').scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+
+  /* resumen + WhatsApp */
+  var nf2=new Intl.NumberFormat('es-UY');
+  function sync(){
+    var s=SIZES[st.size];
+    $('capSize').textContent=s.short;
+    $('capPrint').textContent=st.logo?'Logo + texto':'Impresión 1 color';
+    $('sSize').textContent=s.label;
+    $('sCup').textContent=st.cupName;
+    $('sInk').textContent=st.inkName+' — '+FONTS[st.font].label.toLowerCase();
+    $('sArt').textContent=st.logo?('Logo'+(st.l1?' + "'+st.l1+'"':'')):(st.l1?'Texto: '+st.l1:'Sin texto');
+    $('sQty').textContent=nf2.format(st.qty)+' vasos';
+    var t='¡Hola Tuvaso! Diseñé mi vaso en la web:\n'+
+          '• Modelo: '+s.label+'\n'+
+          '• Color del vaso: '+st.cupName+'\n'+
+          '• Impresión: '+st.inkName+'\n'+
+          '• Tipografía: '+FONTS[st.font].label+'\n'+
+          (st.l1?'• Texto principal: '+st.l1+'\n':'')+
+          (st.l2?'• Segunda línea: '+st.l2+'\n':'')+
+          (st.logo?'• Logo: '+st.logoName+' (te lo adjunto)\n':'')+
+          '• Cantidad: '+nf2.format(st.qty)+' vasos\n\n'+
+          '¿Me pasan precio y plazo de entrega?';
+    $('waDesign').href=WA+encodeURIComponent(t);
+  }
+
+  /* ---- descarga de la maqueta (canvas) ---- */
+  function curved(ctx,L,S,ox,oy){
+    var a=L.arc,N=160,pts=[],acc=0,prev=qp(a,0);
+    for(var i=1;i<=N;i++){var p=qp(a,i/N);acc+=Math.hypot(p.x-prev.x,p.y-prev.y);
+      pts.push({t:i/N,l:acc});prev=p;}
+    var total=acc;
+    ctx.font=L.wt+' '+(L.fs*S)+'px '+L.fam;
+    ctx.textAlign='center'; ctx.textBaseline='alphabetic'; ctx.fillStyle=st.ink;
+    var chars=L.t.split(''),ws=chars.map(function(c){return ctx.measureText(c).width+L.ls*S;}),
+        tw=ws.reduce(function(a2,b2){return a2+b2},0)-L.ls*S,
+        at=(total*S-tw)/2;
+    chars.forEach(function(c,i){
+      var target=(at+ws[i]/2)/S, t=tAt(pts,target,total),
+          p=qp(a,t), ang=qa(a,t);
+      ctx.save();
+      ctx.translate(ox+p.x*S,oy+p.y*S);
+      ctx.rotate(ang);
+      ctx.fillText(c,0,0);
+      ctx.restore();
+      at+=ws[i];
+    });
+  }
+  function qp(a,t){var u=1-t;return{x:u*u*a.p0.x+2*u*t*a.pc.x+t*t*a.p2.x,
+                                    y:u*u*a.p0.y+2*u*t*a.pc.y+t*t*a.p2.y};}
+  function qa(a,t){var u=1-t;return Math.atan2(2*u*(a.pc.y-a.p0.y)+2*t*(a.p2.y-a.pc.y),
+                                               2*u*(a.pc.x-a.p0.x)+2*t*(a.p2.x-a.pc.x));}
+  function tAt(pts,len,total){
+    len=Math.max(0,Math.min(total,len));
+    for(var i=0;i<pts.length;i++){if(pts[i].l>=len)return pts[i].t;}
+    return 1;
+  }
+  function sheet(){
+    var S=2.6, TOP=52, W=Math.round(320*S), H=Math.round(400*S), m=model(), g=m.g;
+    var cv=document.createElement('canvas'); cv.width=W; cv.height=H;
+    var c=cv.getContext('2d');
+    c.fillStyle='#120d38'; c.fillRect(0,0,W,H);
+    var rg=c.createRadialGradient(W/2,H*0.32,10,W/2,H*0.32,W*0.7);
+    rg.addColorStop(0,'rgba(216,245,78,.14)'); rg.addColorStop(1,'rgba(216,245,78,0)');
+    c.fillStyle=rg; c.fillRect(0,0,W,H);
+
+    c.save(); c.scale(S,S); c.translate(0,-TOP);
+    c.globalAlpha=.4; c.fillStyle='#05030f';
+    c.beginPath(); c.ellipse(CX,BOT+9,g.rB*1.3,10,0,0,6.2832); c.fill(); c.globalAlpha=1;
+    if(g.s.handle){
+      var hy1=g.topY+g.s.h*0.24, hy2=g.topY+g.s.h*0.72;
+      c.strokeStyle=shade(st.cup,-.16); c.lineWidth=17; c.lineCap='round';
+      c.beginPath(); c.moveTo(CX+g.rT-10,hy1);
+      c.bezierCurveTo(CX+g.rT+62,hy1,CX+g.rT+58,hy2,CX+g.rB-4,hy2); c.stroke();
+    }
+    var bp=new Path2D(g.d);
+    c.fillStyle=st.cup; c.fill(bp);
+    c.save(); c.clip(bp);
+    if(m.logo&&st.logo){
+      var iw=st.logo.naturalWidth||m.logo.w, ih=st.logo.naturalHeight||m.logo.h,
+          r=Math.min(m.logo.w/iw,m.logo.h/ih), dw=iw*r, dh=ih*r;
+      try{c.drawImage(st.logo,CX-dw/2,m.logo.y+(m.logo.h-dh)/2,dw,dh);}catch(e){}
+    }
+    m.lines.forEach(function(L){ c.save(); c.scale(1/S,1/S); curved(c,L,S,0,0); c.restore(); });
+    var lg=c.createLinearGradient(CX-g.rT,0,CX+g.rT,0);
+    gradStops().forEach(function(t){
+      lg.addColorStop(t[0],(t[1]==='#ffffff'?'rgba(255,255,255,':'rgba(0,0,0,')+t[2]+')');});
+    c.fillStyle=lg; c.fillRect(0,0,320,400);
+    c.restore();
+    function ell(cy,rx,ry,fill,alpha){
+      c.globalAlpha=alpha==null?1:alpha; c.fillStyle=fill;
+      c.beginPath(); c.ellipse(CX,cy,Math.max(0,rx),Math.max(0,ry),0,0,6.2832); c.fill();
+      c.globalAlpha=1;
+    }
+    ell(g.topY,g.rT,g.ryT,shade(st.cup,.2));
+    ell(g.topY+1.5,g.rT-9,Math.max(2,g.ryT-3.5),shade(st.cup,-.55));
+    ell(g.topY-1,g.rT-4,Math.max(1.5,g.ryT-5),'#ffffff',.1);
+    c.restore();
+
+    c.textAlign='center';
+    c.fillStyle='#d8f54e'; c.font='700 '+(15*S)+'px '+FONTS.moderna.fam;
+    c.fillText('TUVASO', W/2, 336*S);
+    c.fillStyle='rgba(242,243,251,.6)'; c.font='500 '+(11*S)+'px Inter,sans-serif';
+    c.fillText(SIZES[st.size].label+' · '+st.cupName+' · impresión '+st.inkName, W/2, 358*S);
+    c.fillText(nf2.format(st.qty)+' unidades · maqueta orientativa · tuvaso.uy', W/2, 378*S);
+    return cv;
+  }
+  $('dlBtn').addEventListener('click',function(){
+    var btn=this, old=btn.innerHTML;
+    function go(){
+      try{
+        var cv=sheet(), a=document.createElement('a');
+        a.download='maqueta-tuvaso-'+(st.l1||'vaso').toLowerCase().replace(/[^a-z0-9]+/g,'-')+'.png';
+        a.href=cv.toDataURL('image/png'); a.click();
+      }catch(e){ alert('No pudimos generar la imagen en este navegador.'); }
+      btn.innerHTML=old; btn.disabled=false;
+    }
+    btn.disabled=true; btn.textContent='Generando…';
+    if(document.fonts&&document.fonts.ready){document.fonts.ready.then(go).catch(go);}else{setTimeout(go,60);}
+  });
+
+  render();
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(render).catch(function(){});}
+
 
   /* ---- calculadora ---- */
   var g=document.getElementById('guests'),h=document.getElementById('hours'),
