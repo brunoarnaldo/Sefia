@@ -510,7 +510,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;bac
               <clipPath id="logoClip"><rect id="logoClipR" x="0" y="0" width="0" height="0"></rect></clipPath>
             </defs>
 
-            <ellipse id="drop" cx="160" cy="362" rx="70" ry="10" fill="#05030f" opacity=".55"
+            <ellipse id="floor" cx="160" cy="362" rx="70" ry="10" fill="#05030f" opacity=".55"
               filter="url(#blur10)"></ellipse>
             <path id="handle" d="" fill="none" stroke="none" stroke-width="17" stroke-linecap="round"></path>
             <path id="body" d="" fill="#2b2280"></path>
@@ -825,7 +825,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;bac
   };
 
   var $=function(id){return document.getElementById(id)};
-  var elBody=$('body'), elClip=$('clipBody'), elHandle=$('handle'), elDrop=$('drop'),
+  var elBody=$('body'), elClip=$('clipBody'), elHandle=$('handle'), elDrop=$('floor'),
       elRimO=$('rimOut'), elRimI=$('rimIn'), elRimH=$('rimHi'), elCyl=$('cyl'),
       elP1=$('p1'), elP2=$('p2'), elT1=$('t1'), elT2=$('t2'), elTp1=$('tp1'), elTp2=$('tp2'),
       elLogo=$('logoImg'), meas=$('meas'), elSvg=$('cup');
