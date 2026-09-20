@@ -3,996 +3,1217 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preload" as="image" href="uploads/hero-sefia.png">
-<title>SEFIA Uruguay — Calefactores a leña y pellet</title>
-<meta name="description" content="Calefactores a leña y pellet SEFIA en Uruguay. 21 modelos con doble combustión, hornos, empotrables y pellet automático. Envíos a todo el país.">
-<meta name="theme-color" content="#0a0908">
-<meta property="og:title" content="SEFIA — El calor de tu hogar">
-<meta property="og:description" content="Calefactores a leña y pellet SEFIA. 21 modelos — envíos a todo el país.">
-<meta property="og:image" content="uploads/hero-sefia.png">
+<title>Tuvaso — Vasos reutilizables personalizados para tus eventos</title>
+<meta name="description" content="Vasos reutilizables personalizados con tu marca o tu evento. De lo descartable a lo sustentable. Envíos a todo Uruguay.">
+<meta name="theme-color" content="#120d38">
+<meta property="og:title" content="Tuvaso — De lo descartable a lo sustentable">
+<meta property="og:description" content="Vasos reutilizables personalizados para eventos, marcas y boliches. Uruguay.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;1,9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:opsz,wght@9..144,800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0a0908; --surface:#15120f; --surface-2:#1d1814; --line:rgba(244,239,232,.09);
-  --fg:#f4efe8; --fg-2:rgba(244,239,232,.66); --fg-3:rgba(244,239,232,.4);
-  --ember:#e8622c; --ember-2:#f08a4b; --ember-soft:rgba(232,98,44,.13);
-  --sefia:#1f86c4; --sefia-2:#7cc4e8; --sefia-soft:rgba(31,134,196,.14);
+  --ink:#120d38; --surface:#191354; --surface-2:#221a6b; --line:rgba(226,232,255,.11);
+  --fg:#f2f3fb; --fg-2:rgba(242,243,251,.68); --fg-3:rgba(242,243,251,.42);
+  --lime:#d8f54e; --lime-2:#e9ff86; --lime-soft:rgba(216,245,78,.13);
   --wa:#25d366; --wa-ink:#08240f;
-  --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,-apple-system,sans-serif;
-  --pad:clamp(20px,5vw,48px); --wrap:1180px; --r:18px;
+  --display:'Space Grotesk',system-ui,sans-serif; --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --pad:clamp(20px,5vw,48px); --wrap:1180px; --r:20px;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--ink);color:var(--fg);font-family:var(--sans);
   -webkit-font-smoothing:antialiased;letter-spacing:-.006em}
 img{max-width:100%}
-a{color:var(--ember-2);text-decoration:none}
-a:hover{color:#f6b189}
-::selection{background:var(--ember);color:#fff}
-h1,h2,h3{font-family:var(--serif);font-weight:800;letter-spacing:-.025em;margin:0}
-:focus-visible{outline:2px solid var(--ember-2);outline-offset:3px;border-radius:6px}
-html{scroll-behavior:smooth;scroll-padding-top:78px}
+a{color:var(--lime);text-decoration:none}
+a:hover{color:var(--lime-2)}
+::selection{background:var(--lime);color:var(--ink)}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;margin:0}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:8px}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 
-/* --- utilidades ---------------------------------------------------------- */
+/* ---- utilidades --------------------------------------------------------- */
 .wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad)}
-.sec{padding-block:clamp(52px,7vw,92px)}
-.eyebrow{display:block;font-size:11.5px;font-weight:700;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--ember-2)}
-.eyebrow.blue{color:var(--sefia-2)}
-.h2{font-size:clamp(30px,4.2vw,46px);line-height:1.03;text-wrap:balance}
-.lede{margin:0;font-size:15.5px;line-height:1.6;color:var(--fg-2);max-width:56ch}
-.shead{display:flex;flex-direction:column;gap:10px;margin-bottom:clamp(24px,3.5vw,40px)}
+.sec{padding-block:clamp(54px,7vw,96px)}
+.eyebrow{display:block;font-size:11.5px;font-weight:700;letter-spacing:.17em;
+  text-transform:uppercase;color:var(--lime)}
+.h2{font-size:clamp(30px,4.3vw,48px);line-height:1.02;text-wrap:balance}
+.lede{margin:0;font-size:15.5px;line-height:1.62;color:var(--fg-2);max-width:58ch}
+.shead{display:flex;flex-direction:column;gap:11px;margin-bottom:clamp(26px,3.6vw,42px)}
 .i{width:1em;height:1em;fill:currentColor;flex:none}
+.note{font-size:12px;color:var(--fg-3);margin:14px 0 0}
 
-/* marca SEFIA */
-.mark{font-family:var(--sans);font-weight:300;letter-spacing:.34em;text-transform:uppercase;
+/* marca */
+.mark{font-family:var(--display);font-weight:600;letter-spacing:.06em;text-transform:uppercase;
   color:var(--fg);line-height:1;white-space:nowrap}
+.mark em{font-style:normal;color:var(--lime)}
 
 /* botones */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;height:52px;
-  padding:0 22px;border-radius:13px;font-size:15px;font-weight:700;white-space:nowrap;
-  transition:transform .15s,filter .15s,background .15s}
+  padding:0 23px;border-radius:14px;font-size:15px;font-weight:700;white-space:nowrap;
+  border:0;cursor:pointer;font-family:var(--sans);
+  transition:transform .15s,filter .15s,background .15s,border-color .15s}
 .btn:hover{transform:translateY(-1px)}
 .btn-wa{background:var(--wa);color:var(--wa-ink)}
 .btn-wa:hover{background:#37e277;color:var(--wa-ink)}
-.btn-ghost{background:rgba(244,239,232,.06);border:1px solid var(--line);color:var(--fg)}
-.btn-ghost:hover{border-color:var(--ember);color:var(--fg)}
+.btn-lime{background:var(--lime);color:var(--ink)}
+.btn-lime:hover{background:var(--lime-2);color:var(--ink)}
+.btn-ghost{background:rgba(242,243,251,.06);border:1px solid var(--line);color:var(--fg)}
+.btn-ghost:hover{border-color:var(--lime);color:var(--fg)}
 .btn-sm{height:42px;padding:0 16px;font-size:13.5px;border-radius:11px}
 
-/* --- nav ----------------------------------------------------------------- */
-.nav{position:sticky;top:0;z-index:80;background:rgba(10,9,8,.82);
+/* ---- nav ---------------------------------------------------------------- */
+.nav{position:sticky;top:0;z-index:80;background:rgba(18,13,56,.85);
   backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;gap:18px;height:66px}
-.nav .brand{display:flex;align-items:center;gap:12px;min-width:0}
-.nav .mark{font-size:19px}
+.nav .wrap{display:flex;align-items:center;gap:18px;height:68px}
+.nav .brand{display:flex;align-items:center;gap:11px;min-width:0}
+.nav .dot{width:34px;height:34px;border-radius:50%;background:var(--surface-2);
+  display:grid;place-items:center;font-family:var(--display);font-weight:700;
+  color:var(--lime);font-size:17px;flex:none}
+.nav .mark{font-size:18px}
 .nav nav{display:none;margin-left:auto;gap:26px}
 .nav nav a{font-size:13.5px;font-weight:500;color:var(--fg-2)}
 .nav nav a:hover{color:var(--fg)}
 .nav .btn{margin-left:auto}
-@media(min-width:900px){.nav nav{display:flex}.nav .btn{margin-left:0}}
+@media(min-width:960px){.nav nav{display:flex}.nav .btn{margin-left:0}}
 
-/* --- hero ---------------------------------------------------------------- */
-.hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;
-  min-height:min(760px,86vh);overflow:hidden}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
-.hero .veil{position:absolute;inset:0;background:
-  radial-gradient(120% 80% at 15% 100%,rgba(232,98,44,.16),transparent 60%),
-  linear-gradient(180deg,rgba(10,9,8,.72) 0%,rgba(10,9,8,.2) 26%,rgba(10,9,8,.72) 52%,
-    rgba(10,9,8,.93) 78%,var(--ink) 99%)}
-.hero .wrap{position:relative;padding-block:clamp(40px,6vw,72px);display:flex;
-  flex-direction:column;align-items:flex-start;gap:18px}
-.hero h1,.hero .lede{text-shadow:0 2px 22px rgba(6,5,4,.65)}
-.hero h1{font-size:clamp(44px,7.2vw,86px);line-height:.98;text-wrap:balance;max-width:14ch}
-.hero h1 em{font-style:italic;color:var(--ember-2)}
-@media(max-width:559px){.hero .cta{width:100%}.hero .cta .btn{flex:1 1 100%}}
+/* ---- hero --------------------------------------------------------------- */
+.hero{position:relative;overflow:hidden;
+  background:
+    radial-gradient(90% 70% at 88% 12%,rgba(216,245,78,.14),transparent 62%),
+    radial-gradient(80% 70% at 6% 96%,rgba(103,86,255,.28),transparent 60%),
+    linear-gradient(180deg,#1a1358 0%,var(--ink) 92%)}
+.hero .wrap{position:relative;display:grid;gap:clamp(34px,5vw,56px);
+  padding-block:clamp(48px,7vw,86px);align-items:center}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.08fr .92fr}}
+.hero h1{font-size:clamp(42px,6.6vw,78px);line-height:.98;text-wrap:balance;max-width:13ch}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero .copy{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
-.tag{display:inline-flex;align-items:center;height:30px;padding:0 13px;border-radius:999px;
-  font-size:12.5px;font-weight:700;letter-spacing:.01em}
-.tag.fill{background:var(--ember);color:#fff}
-.tag.line{background:rgba(10,9,8,.5);border:1px solid rgba(244,239,232,.24);color:var(--fg)}
-.hero .cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:4px}
-.stats{position:relative;border-top:1px solid var(--line);background:rgba(10,9,8,.55)}
-.stats .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:1px 0;padding-block:0}
-.stats div{padding:20px 0;display:flex;flex-direction:column;gap:3px}
-.stats div+div{border-left:1px solid var(--line);padding-left:20px}
-.stats b{font-family:var(--serif);font-weight:800;font-size:clamp(24px,3vw,32px);
-  line-height:1;color:var(--fg)}
-.stats span{font-size:12px;color:var(--fg-3);letter-spacing:.04em}
+.tag{display:inline-flex;align-items:center;height:31px;padding:0 14px;border-radius:999px;
+  font-size:12.5px;font-weight:700}
+.tag.fill{background:var(--lime);color:var(--ink)}
+.tag.line{background:rgba(18,13,56,.45);border:1px solid rgba(242,243,251,.22);color:var(--fg)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:11px}
+@media(max-width:559px){.hero .cta{width:100%}.hero .cta .btn{flex:1 1 100%}}
+.stack{position:relative;display:grid;place-items:center;min-height:340px}
+.stack .glow{position:absolute;width:74%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(216,245,78,.2),transparent 68%);filter:blur(12px)}
+.stack svg{position:relative;width:min(100%,420px);height:auto;
+  filter:drop-shadow(0 26px 40px rgba(6,4,26,.6))}
+.stack .c2{position:absolute;width:38%;left:2%;bottom:6%;opacity:.95;
+  transform:rotate(-9deg);filter:drop-shadow(0 18px 26px rgba(6,4,26,.55))}
+.stack .c3{position:absolute;width:32%;right:1%;top:8%;opacity:.9;
+  transform:rotate(11deg);filter:drop-shadow(0 18px 26px rgba(6,4,26,.55))}
+
+/* ---- franja datos ------------------------------------------------------- */
+.stats{border-block:1px solid var(--line);background:rgba(34,26,107,.35)}
+.stats .wrap{display:grid;grid-template-columns:repeat(2,1fr)}
+.stats div{padding:22px 0;display:flex;flex-direction:column;gap:4px}
+.stats div+div{border-left:1px solid var(--line);padding-left:22px}
+.stats b{font-family:var(--display);font-size:clamp(24px,3.2vw,32px);line-height:1;color:var(--lime)}
+.stats span{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--fg-3)}
 @media(min-width:760px){.stats .wrap{grid-template-columns:repeat(4,1fr)}}
-@media(max-width:759px){.stats div:nth-child(3){border-left:0;padding-left:0;
-  border-top:1px solid var(--line)}.stats div:nth-child(4){border-top:1px solid var(--line)}}
 
-/* --- por qué SEFIA ------------------------------------------------------- */
-.why{background:var(--surface)}
-.why .grid{display:grid;gap:clamp(20px,3vw,34px);grid-template-columns:1fr;align-items:center}
-@media(min-width:900px){.why .grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}}
-.why figure{margin:0;border-radius:22px;overflow:hidden;border:1px solid var(--line);
-  position:relative;aspect-ratio:4/3.4}
-@media(min-width:900px){.why figure{aspect-ratio:1/1}}
-.why figure img{width:100%;height:100%;object-fit:cover;object-position:50% 42%;display:block}
-.why figure figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;
-  font-size:12.5px;color:var(--fg-2);background:linear-gradient(transparent,rgba(10,9,8,.9))}
-.pillars{display:grid;gap:2px;background:var(--line);border:1px solid var(--line);
-  border-radius:18px;overflow:hidden}
-@media(min-width:520px){.pillars{grid-template-columns:1fr 1fr}}
-.pillars div{background:var(--surface);padding:20px 18px;display:flex;flex-direction:column;gap:7px}
-.pillars h3{font-size:17px;letter-spacing:-.015em}
-.pillars p{margin:0;font-size:13.5px;line-height:1.55;color:var(--fg-2)}
-.pillars .n{font-family:var(--serif);font-weight:800;font-size:12px;color:var(--ember-2);
-  letter-spacing:.1em}
+/* ---- por qué ------------------------------------------------------------ */
+.pillars{display:grid;gap:14px}
+@media(min-width:640px){.pillars{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.pillars{grid-template-columns:repeat(4,1fr)}}
+.pillars article{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:24px 22px 26px;display:flex;flex-direction:column;gap:10px}
+.pillars .n{font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.14em;
+  color:var(--lime)}
+.pillars h3{font-size:19px;line-height:1.2}
+.pillars p{margin:0;font-size:14.5px;line-height:1.58;color:var(--fg-2)}
 
-/* --- catálogo filtrable (CSS puro) --------------------------------------- */
-.fx{position:absolute;width:0;height:0;opacity:0;pointer-events:none}
-.filters{display:flex;flex-direction:column;gap:12px;margin-bottom:26px}
-.frow{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-.frow>i{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--fg-3);margin-right:4px;min-width:52px}
-.chip{cursor:pointer;display:inline-flex;align-items:center;height:38px;padding:0 17px;
-  border-radius:999px;background:var(--surface-2);border:1px solid var(--line);
-  color:var(--fg-2);font-size:13.5px;font-weight:600;user-select:none;transition:.16s}
-.chip:hover{border-color:rgba(232,98,44,.55);color:var(--fg)}
-#f-todos:checked~.filters label[for=f-todos],
-#f-lena:checked~.filters label[for=f-lena],
-#f-horno:checked~.filters label[for=f-horno],
-#f-empotrar:checked~.filters label[for=f-empotrar],
-#f-pellet:checked~.filters label[for=f-pellet],
-#f-kit:checked~.filters label[for=f-kit]
-  {background:var(--ember);border-color:var(--ember);color:#fff}
-#m-todos:checked~.filters label[for=m-todos],
-#m-chico:checked~.filters label[for=m-chico],
-#m-medio:checked~.filters label[for=m-medio],
-#m-grande:checked~.filters label[for=m-grande]
-  {background:var(--sefia);border-color:var(--sefia);color:#fff}
+/* ---- productos ---------------------------------------------------------- */
+.prods{display:grid;gap:14px}
+@media(min-width:620px){.prods{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.prods{grid-template-columns:repeat(4,1fr)}}
+.prod{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;display:flex;flex-direction:column;transition:border-color .16s,transform .16s}
+.prod:hover{border-color:rgba(216,245,78,.45);transform:translateY(-2px)}
+.prod .ph{display:grid;place-items:center;padding:26px 0 18px;
+  background:linear-gradient(180deg,var(--surface-2),transparent)}
+.prod .ph svg{width:auto;height:150px}
+.prod .body{padding:0 20px 22px;display:flex;flex-direction:column;gap:7px}
+.prod h3{font-size:18px}
+.prod .ml{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lime)}
+.prod p{margin:0;font-size:14px;line-height:1.55;color:var(--fg-2)}
 
-.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:12px}
-@media(min-width:600px){.pgrid{grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:16px}}
-#f-lena:checked~.pgrid .pcard:not([data-cat~=lena]),
-#f-horno:checked~.pgrid .pcard:not([data-cat~=horno]),
-#f-empotrar:checked~.pgrid .pcard:not([data-cat~=empotrar]),
-#f-pellet:checked~.pgrid .pcard:not([data-cat~=pellet]),
-#f-kit:checked~.pgrid .pcard:not([data-cat~=kit]),
-#m-chico:checked~.pgrid .pcard:not([data-m~=chico]),
-#m-medio:checked~.pgrid .pcard:not([data-m~=medio]),
-#m-grande:checked~.pgrid .pcard:not([data-m~=grande]){display:none!important}
+/* ---- personalizador ----------------------------------------------------- */
+.lab{display:grid;gap:clamp(18px,2.6vw,28px)}
+@media(min-width:940px){.lab{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);align-items:start}}
+.stage .box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(12px,2vw,20px);display:grid;place-items:center;min-height:404px;
+  background-image:radial-gradient(74% 58% at 50% 32%,rgba(216,245,78,.14),transparent 72%)}
+.stage svg{width:min(100%,352px);height:auto}
+.stage .cap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;
+  margin-top:12px;font-size:12px;color:var(--fg-3)}
+.stage .cap b{color:var(--fg-2);font-weight:600}
+@media(min-width:940px){.stage{position:sticky;top:88px}}
+@media(max-width:939px){
+  .stage{position:sticky;top:62px;z-index:6;padding-bottom:12px;background:var(--ink);
+    box-shadow:0 14px 16px -12px rgba(8,5,30,.9)}
+  .stage .box{min-height:0;padding:10px}
+  .stage svg{width:min(60%,200px)}
+  .stage .cap{margin-top:8px;font-size:11px}
+}
+.panelc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(20px,2.6vw,30px)}
+.field{display:flex;flex-direction:column;gap:9px;margin-bottom:20px}
+.field>label:not(.drop),.field>.lbl{font-size:11.5px;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--fg-3)}
+.field input[type=text]{height:48px;padding:0 15px;border-radius:12px;background:var(--ink);
+  border:1px solid var(--line);color:var(--fg);font:inherit;font-size:15px;width:100%}
+.field input[type=text]:focus{border-color:var(--lime);outline:none}
+.row2{display:grid;gap:14px}
+@media(min-width:540px){.row2{grid-template-columns:1fr 1fr}}
+.row2 .field{margin-bottom:0}
+.presets{display:flex;flex-wrap:wrap;gap:8px}
+.chip{height:38px;padding:0 14px;border-radius:999px;background:rgba(242,243,251,.05);
+  border:1px solid var(--line);color:var(--fg-2);font:inherit;font-size:13px;font-weight:600;
+  cursor:pointer;transition:border-color .14s,color .14s,background .14s}
+.chip:hover{border-color:var(--lime);color:var(--fg)}
+.swatches{display:flex;flex-wrap:wrap;gap:9px}
+.sw{position:relative;width:36px;height:36px;border-radius:50%;border:0;cursor:pointer;padding:0;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);transition:transform .14s,box-shadow .14s}
+.sw:hover{transform:scale(1.08)}
+.sw[aria-pressed=true]{transform:scale(1.08);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),0 0 0 2px var(--surface),0 0 0 4px var(--lime)}
+.sw.more{background:conic-gradient(#e2382f,#d8f54e,#3fd08a,#3f9fe0,#a86ff0,#e2382f);overflow:hidden}
+.sw.more input{position:absolute;inset:-6px;width:150%;height:150%;opacity:0;cursor:pointer;
+  border:0;padding:0;background:none}
+.segs{display:flex;flex-wrap:wrap;gap:8px}
+.seg{height:42px;padding:0 15px;border-radius:12px;background:rgba(242,243,251,.05);
+  border:1px solid var(--line);color:var(--fg-2);font:inherit;font-size:13.5px;font-weight:600;
+  cursor:pointer;transition:border-color .14s,color .14s,background .14s}
+.seg:hover{border-color:rgba(216,245,78,.5)}
+.seg[aria-pressed=true]{background:var(--lime-soft);border-color:var(--lime);color:var(--fg)}
+.seg[data-font=elegante]{font-family:'Fraunces',Georgia,serif;font-weight:800}
+.seg[data-font=fuerte]{font-family:'Archivo Black',sans-serif;font-weight:400}
+.seg[data-font=moderna]{font-family:'Space Grotesk',sans-serif;font-weight:700}
+.drop{display:flex;align-items:center;gap:13px;padding:13px 15px;border-radius:14px;
+  border:1px dashed rgba(242,243,251,.25);background:var(--ink);cursor:pointer;
+  transition:border-color .14s,background .14s;text-align:left;width:100%;font:inherit;color:inherit}
+.drop:hover,.drop.over{border-color:var(--lime);background:var(--lime-soft)}
+.drop .ic{width:40px;height:40px;border-radius:11px;background:var(--lime-soft);color:var(--lime);
+  display:grid;place-items:center;flex:none}
+.drop .ic svg{width:19px;height:19px}
+.drop .tx{min-width:0}
+.drop b{display:block;font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;
+  white-space:nowrap}
+.drop span{font-size:12px;color:var(--fg-3)}
+.drop input{display:none}
+.logorow{display:flex;align-items:center;gap:12px;margin-top:10px}
+.logorow[hidden]{display:none}
+.logorow input[type=range]{flex:1}
+.linkbtn{background:none;border:0;color:var(--fg-3);font:inherit;font-size:12.5px;
+  text-decoration:underline;cursor:pointer;padding:0}
+.linkbtn:hover{color:var(--lime)}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:44px;height:44px;border-radius:12px;background:rgba(242,243,251,.06);
+  border:1px solid var(--line);color:var(--fg);font-size:19px;line-height:1;cursor:pointer}
+.qty button:hover{border-color:var(--lime)}
+.qty input{width:92px;height:44px;text-align:center;border-radius:12px;background:var(--ink);
+  border:1px solid var(--line);color:var(--fg);font:inherit;font-weight:700;font-size:16px}
+.qty .hint{font-size:12.5px;color:var(--fg-3)}
+.summary{border-top:1px solid var(--line);margin-top:4px;padding-top:16px;display:grid;gap:8px}
+.summary div{display:flex;justify-content:space-between;gap:16px;font-size:13.5px}
+.summary dt{color:var(--fg-3)}
+.summary dd{margin:0;color:var(--fg);font-weight:600;text-align:right;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:60%}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.actions .btn{flex:1 1 200px}
 
-.empty{display:none;padding:34px 22px;text-align:center;border:1px dashed var(--line);
-  border-radius:var(--r);color:var(--fg-2);font-size:14.5px;line-height:1.6}
-#f-kit:checked~#m-chico:checked~.empty,
-#f-kit:checked~#m-medio:checked~.empty,
-#f-kit:checked~#m-grande:checked~.empty,
-#f-pellet:checked~#m-grande:checked~.empty,
-#f-empotrar:checked~#m-chico:checked~.empty{display:block}
-#f-kit:checked~#m-chico:checked~.pgrid,
-#f-kit:checked~#m-medio:checked~.pgrid,
-#f-kit:checked~#m-grande:checked~.pgrid,
-#f-pellet:checked~#m-grande:checked~.pgrid,
-#f-empotrar:checked~#m-chico:checked~.pgrid{display:none}
+/* ---- calculadora -------------------------------------------------------- */
+.calc{display:grid;gap:clamp(22px,3vw,34px)}
+@media(min-width:860px){.calc{grid-template-columns:1fr 1fr;align-items:start}}
+.calc .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(20px,3vw,30px)}
+.range{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+.range .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.range .top span{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--fg-3)}
+.range .top b{font-family:var(--display);font-size:20px;color:var(--lime)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:99px;
+  background:rgba(242,243,251,.13);cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;
+  border-radius:50%;background:var(--lime);border:3px solid var(--surface);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--lime);
+  border:3px solid var(--surface);cursor:pointer}
+.out{display:grid;gap:12px}
+@media(min-width:420px){.out{grid-template-columns:repeat(2,1fr)}}
+.out div{background:var(--surface-2);border:1px solid var(--line);border-radius:15px;
+  padding:18px 18px 20px;display:flex;flex-direction:column;gap:5px}
+.out b{font-family:var(--display);font-size:clamp(26px,3.6vw,34px);line-height:1;color:var(--lime)}
+.out span{font-size:12px;line-height:1.4;color:var(--fg-3)}
 
-.pcard{position:relative;display:flex;flex-direction:column;background:var(--surface);
-  border:1px solid var(--line);border-radius:var(--r);overflow:hidden;color:inherit;
-  transition:transform .2s,border-color .2s,box-shadow .2s}
-.pcard:hover{transform:translateY(-4px);border-color:rgba(232,98,44,.5);
-  box-shadow:0 16px 38px rgba(0,0,0,.45);color:inherit}
-.pcard .shot{position:relative;height:150px;background:#fff}
-.pcard .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:12px}
-.pcard .m2{position:absolute;top:8px;right:8px;display:inline-flex;align-items:center;
-  height:24px;padding:0 10px;border-radius:999px;background:#16110d;color:#fff;
-  font-size:11px;font-weight:700}
-.pcard .body{padding:13px;display:flex;flex-direction:column;gap:8px;flex:1}
-.pcard h3{font-size:17px;color:var(--fg)}
-@media(min-width:600px){.pcard .shot{height:198px}.pcard .shot img{padding:14px}
-  .pcard .body{padding:15px;gap:9px}.pcard h3{font-size:20px}}
-.pcard .pills{display:flex;flex-wrap:wrap;gap:6px}
-.pill{display:inline-flex;align-items:center;height:23px;padding:0 9px;border-radius:999px;
-  font-size:11px;font-weight:700;background:var(--ember-soft);color:var(--ember-2)}
-.pill.b{background:var(--sefia-soft);color:var(--sefia-2)}
-.price{display:flex;flex-direction:column;gap:1px}
-.price b{font-family:var(--serif);font-weight:800;font-size:22px;color:var(--fg)}
-.price span{font-size:11.5px;color:var(--fg-3)}
-.pcard .more{margin-top:auto;padding-top:2px;display:flex;align-items:center;gap:7px;
-  white-space:nowrap;color:var(--fg-2);font-size:12.5px;font-weight:600}
-.pcard:hover .more{color:var(--fg)}
-.pcard .more span{margin-left:auto;opacity:.6}
-.helper{margin:26px 0 0;font-size:14.5px}
+/* ---- casos -------------------------------------------------------------- */
+.cases{display:grid;gap:12px}
+@media(min-width:620px){.cases{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.cases{grid-template-columns:repeat(3,1fr)}}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;
+  display:flex;flex-direction:column;gap:8px}
+.case h3{font-size:17px}
+.case p{margin:0;font-size:14px;line-height:1.55;color:var(--fg-2)}
+.case .pin{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--lime)}
 
-/* --- fichas técnicas (modales) ------------------------------------------- */
-.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
-  padding:20px 16px;background:rgba(6,5,4,.86);backdrop-filter:blur(6px)}
-.modal:target{display:flex}
-.modal .modal-back{position:fixed;inset:0}
-.modal .sheet{position:relative;width:100%;max-width:560px;max-height:90vh;display:flex;
-  flex-direction:column;overflow:hidden;background:var(--surface);border:1px solid var(--line);
-  border-radius:20px;padding:14px;box-shadow:0 30px 70px rgba(0,0,0,.65);animation:spIn .22s ease}
-@keyframes spIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.modal .sheet-body{flex:1 1 auto;min-height:0;overflow-y:auto;margin-top:12px}
-.modal .mt,.modal .wabtn{flex:none}
-.modal .mt{margin:2px 44px 0 4px;font-size:25px;color:var(--fg)}
-.modal .x{position:absolute;top:14px;right:14px;z-index:2;width:34px;height:34px;display:flex;
-  align-items:center;justify-content:center;border-radius:50%;background:rgba(10,9,8,.7);
-  border:1px solid rgba(244,239,232,.24);color:var(--fg);font-size:15px}
-.modal .x:hover{background:var(--ember);border-color:var(--ember);color:#fff}
-.modal .gal{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.modal .gal.one{grid-template-columns:1fr}
-.modal .gal img{width:100%;height:200px;border-radius:12px;display:block}
-.modal .gal img.norm{object-fit:contain;background:#fff;padding:8px}
-.modal .gal img.casa{object-fit:cover}
-.modal .specs{list-style:none;margin:14px 4px 0;padding:0}
-.modal .specs li{display:flex;gap:12px;font-size:13.5px;line-height:1.45;color:var(--fg-2);
-  padding:10px 0;border-bottom:1px solid var(--line)}
-.modal .specs li b{flex:none;width:94px;color:var(--fg);font-weight:600}
-.modal .fichah{margin:18px 4px 8px;font-size:11px;font-weight:700;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--sefia-2)}
-.modal .ficha{display:block;width:100%;height:auto;border-radius:12px;background:#fff}
-.modal .wabtn{display:flex;align-items:center;justify-content:center;gap:10px;height:52px;
-  margin-top:12px;border-radius:13px;background:var(--wa);color:var(--wa-ink);
-  font-weight:700;font-size:15.5px}
-.modal .wabtn .i{width:18px;height:18px}
+/* ---- pasos -------------------------------------------------------------- */
+.steps{display:grid;gap:14px;counter-reset:s}
+@media(min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{position:relative;padding:26px 20px 24px;border:1px solid var(--line);border-radius:16px;
+  background:linear-gradient(180deg,var(--surface),rgba(25,19,84,.35))}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);
+  font-family:var(--display);font-size:13px;font-weight:700;color:var(--ink);
+  background:var(--lime);border-radius:8px;padding:3px 8px;display:inline-block;margin-bottom:12px}
+.step h3{font-size:17px;margin-bottom:7px}
+.step p{margin:0;font-size:14px;line-height:1.55;color:var(--fg-2)}
 
-/* --- galería ------------------------------------------------------------- */
-.gallery{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(158px,1fr))}
-.gallery figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);
-  min-height:126px}
-.gallery figure:first-child{grid-column:span 2;grid-row:span 2;min-height:264px}
-.gallery img{width:100%;height:100%;object-fit:cover;display:block}
-
-/* --- footer -------------------------------------------------------------- */
-.foot{background:var(--surface);border-top:1px solid var(--line);
-  padding-block:clamp(44px,6vw,72px) 110px}
-.foot .grid{display:grid;gap:28px;grid-template-columns:1fr;align-items:start}
-@media(min-width:840px){.foot .grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
-.foot .card{background:linear-gradient(160deg,#2a2119,#191510);
-  border:1px solid rgba(232,98,44,.3);border-radius:22px;padding:26px 22px;
+/* ---- testimonios -------------------------------------------------------- */
+.quotes{display:grid;gap:14px}
+@media(min-width:820px){.quotes{grid-template-columns:repeat(3,1fr)}}
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;
   display:flex;flex-direction:column;gap:14px}
-.foot .card h2{font-size:27px;line-height:1.08}
-.foot .card p{margin:0;font-size:14px;line-height:1.55;color:var(--fg-2)}
-.foot .info{display:flex;flex-direction:column;gap:14px}
-.foot .mark{font-size:22px}
-.foot .info p{margin:0;font-size:13px;line-height:1.7;color:var(--fg-3)}
-.foot .pdf{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;height:44px;
-  padding:0 17px;border-radius:12px;background:var(--surface-2);
-  border:1px solid rgba(240,138,75,.45);color:var(--ember-2);font-size:13.5px;font-weight:600}
-.foot .pdf:hover{border-color:var(--ember-2);background:#241c15}
-.foot .legal{font-size:12px;color:rgba(244,239,232,.3)}
+.quote p{margin:0;font-size:15px;line-height:1.6}
+.quote footer{font-size:13px;color:var(--fg-3)}
+.quote .stars{color:var(--lime);letter-spacing:.14em;font-size:13px}
 
-/* --- FAB ----------------------------------------------------------------- */
-.fab{position:fixed;bottom:20px;right:20px;width:58px;height:58px;border-radius:50%;
-  background:var(--wa);display:flex;align-items:center;justify-content:center;z-index:90;
-  color:var(--wa-ink);animation:waPulse 2.8s infinite}
-.fab .i{width:30px;height:30px}
-@keyframes waPulse{0%,100%{box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,.42)}
-  50%{box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 0 15px rgba(37,211,102,0)}}
+/* ---- faq ---------------------------------------------------------------- */
+.faq{display:grid;gap:10px;max-width:820px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:0 20px}
+.faq summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:600;font-size:15.5px;
+  display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';font-family:var(--display);color:var(--lime);font-size:22px;
+  line-height:1}
+.faq details[open] summary::after{content:'–'}
+.faq p{margin:0 0 18px;font-size:14.5px;line-height:1.6;color:var(--fg-2)}
+
+/* ---- footer ------------------------------------------------------------- */
+.foot{border-top:1px solid var(--line);background:
+  radial-gradient(80% 90% at 80% 0%,rgba(216,245,78,.09),transparent 60%),var(--surface)}
+.foot .wrap{display:grid;gap:clamp(26px,4vw,48px);padding-block:clamp(44px,6vw,72px)}
+@media(min-width:880px){.foot .wrap{grid-template-columns:1.05fr .95fr}}
+.foot .card{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(24px,3.2vw,34px);display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.foot .card h2{font-size:clamp(25px,3.2vw,34px);line-height:1.05}
+.foot .card p{margin:0;font-size:15px;line-height:1.6;color:var(--fg-2)}
+.foot .info{display:flex;flex-direction:column;gap:14px}
+.foot .info .mark{font-size:24px}
+.foot .info p{margin:0;font-size:14.5px;line-height:1.65;color:var(--fg-2)}
+.foot .rows{display:flex;flex-direction:column;gap:9px}
+.foot .rows a,.foot .rows span{display:inline-flex;align-items:center;gap:10px;font-size:14.5px;
+  color:var(--fg);font-weight:500}
+.foot .rows a:hover{color:var(--lime)}
+.legal{font-size:12px;color:var(--fg-3);line-height:1.6}
+
+/* ---- fab ---------------------------------------------------------------- */
+.fab{position:fixed;right:18px;bottom:18px;z-index:90;width:56px;height:56px;border-radius:50%;
+  background:var(--wa);color:var(--wa-ink);display:grid;place-items:center;font-size:27px;
+  box-shadow:0 12px 26px rgba(4,3,20,.5);transition:transform .15s}
+.fab:hover{transform:scale(1.06);color:var(--wa-ink)}
 </style>
 </head>
 <body>
 
-<!-- Botones de contacto sin destino: todavía no hay número de WhatsApp.
-     Para reactivarlos, convertir cada <span class="btn btn-wa">, <span class="wabtn">
-     y <span class="fab"> en un <a> con su href. -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="ico-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="ico-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></symbol>
+<symbol id="ico-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 6 10-6"></path></symbol>
+<symbol id="ico-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></symbol>
+<symbol id="ico-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></symbol>
+</svg>
 
 <header class="nav" data-screen-label="Barra superior">
   <div class="wrap">
     <div class="brand">
-      <span class="mark">SEFIA</span>
+      <span class="dot">U</span>
+      <span class="mark">tu<em>v</em>aso</span>
     </div>
     <nav>
-      <a href="#modelos">Modelos</a>
-      <a href="#por-que">Por qué SEFIA</a>
+      <a href="#productos">Productos</a>
+      <a href="#personalizar">Personalizá</a>
+      <a href="#impacto">Impacto</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#faq">Preguntas</a>
     </nav>
-    <span class="btn btn-wa btn-sm">
-      <svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Escribinos</span>
+    <a class="btn btn-wa btn-sm" href="https://wa.me/59899284127?text=Hola%20Tuvaso%2C%20quiero%20cotizar%20vasos%20para%20mi%20evento" target="_blank" rel="noopener">
+      <svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Pedir presupuesto</a>
   </div>
 </header>
 
 <section class="hero" data-screen-label="Hero">
-  <img src="uploads/hero-sefia.png" alt="Living con un calefactor a leña SEFIA encendido" fetchpriority="high">
-  <div class="veil"></div>
   <div class="wrap">
-    <div class="tags">
-      <span class="tag fill">Calefactores a leña y pellet</span>
-      <span class="tag line">SEFIA · marca oficial en Uruguay</span>
-      <span class="tag line">Envíos a todo el país</span>
+    <div class="copy">
+      <div class="tags">
+        <span class="tag fill">Vasos reutilizables personalizados</span>
+        <span class="tag line">Uruguay · envíos a todo el país</span>
+      </div>
+      <h1>De lo descartable a lo <em>sustentable.</em></h1>
+      <p class="lede" style="color:rgba(242,243,251,.86);max-width:48ch">Vasos rígidos reutilizables
+        impresos con tu marca, tu logo o el nombre de tu evento. Se lavan, se usan cientos de veces
+        y tu invitado se los lleva de recuerdo — en vez de tirarlos a la basura.</p>
+      <div class="cta">
+        <a class="btn btn-wa" href="https://wa.me/59899284127?text=Hola%20Tuvaso%2C%20quiero%20cotizar%20vasos%20para%20mi%20evento" target="_blank" rel="noopener">
+          <svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Cotizar mi evento</a>
+        <a class="btn btn-ghost" href="#personalizar">Diseñá tu vaso</a>
+      </div>
     </div>
-    <h1>El calor de tu <em>hogar.</em></h1>
-    <p class="lede" style="color:rgba(244,239,232,.88);max-width:46ch">Somos especialistas en el mercado uruguayo
-      de calefactores a leña y pellet. 21 modelos SEFIA — con horno, esquineros, panorámicos
-      y de empotrar. Enviamos a todo el país.</p>
-    <div class="cta">
-      <span class="btn btn-wa">
-        <svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Encontrá tu modelo ideal</span>
-      <a class="btn btn-ghost" href="#modelos">Ver los 21 modelos</a>
+
+    <div class="stack" aria-hidden="true">
+      <div class="glow"></div>
+      <svg viewBox="0 0 220 280" role="img">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2b2280"></stop><stop offset="1" stop-color="#171153"></stop>
+          </linearGradient>
+        </defs>
+        <path d="M40 40h140l-19 202a16 16 0 0 1-16 15H75a16 16 0 0 1-16-15z" fill="url(#g1)"></path>
+        <ellipse cx="110" cy="40" rx="70" ry="14" fill="#382e9c"></ellipse>
+        <ellipse cx="110" cy="40" rx="60" ry="10" fill="#120d38"></ellipse>
+        <rect x="52" y="112" width="116" height="68" rx="6" fill="rgba(216,245,78,.1)"></rect>
+        <text x="110" y="146" text-anchor="middle" font-family="Space Grotesk,sans-serif"
+          font-size="27" font-weight="700" fill="#d8f54e">TUVASO</text>
+        <text x="110" y="170" text-anchor="middle" font-family="Inter,sans-serif"
+          font-size="12" letter-spacing="3" fill="rgba(242,243,251,.7)">REUTILIZABLE</text>
+      </svg>
+      <svg class="c2" viewBox="0 0 220 280">
+        <path d="M40 40h140l-19 202a16 16 0 0 1-16 15H75a16 16 0 0 1-16-15z" fill="#d8f54e"></path>
+        <ellipse cx="110" cy="40" rx="70" ry="14" fill="#e9ff86"></ellipse>
+        <ellipse cx="110" cy="40" rx="60" ry="10" fill="#bcd93b"></ellipse>
+      </svg>
+      <svg class="c3" viewBox="0 0 220 280">
+        <path d="M40 40h140l-19 202a16 16 0 0 1-16 15H75a16 16 0 0 1-16-15z" fill="#f2f3fb"></path>
+        <ellipse cx="110" cy="40" rx="70" ry="14" fill="#ffffff"></ellipse>
+        <ellipse cx="110" cy="40" rx="60" ry="10" fill="#cfd2e6"></ellipse>
+      </svg>
     </div>
   </div>
 </section>
 
 <div class="stats" data-screen-label="Datos">
   <div class="wrap">
-    <div><b>21</b><span>MODELOS EN CATÁLOGO</span></div>
-    <div><b>250 m²</b><span>HASTA ESO CALIENTA EL MAYOR</span></div>
-    <div><b>+13</b><span>AÑOS EN EL MERCADO URUGUAYO</span></div>
-    <div><b>19</b><span>DEPARTAMENTOS — ENVIAMOS A TODOS</span></div>
+    <div><b>+200</b><span>usos por vaso</span></div>
+    <div><b>100%</b><span>reutilizable y lavable</span></div>
+    <div><b>19</b><span>departamentos — enviamos a todos</span></div>
+    <div><b>24 h</b><span>presupuesto y maqueta</span></div>
   </div>
 </div>
 
-<section class="sec why" id="por-que" data-screen-label="Por qué SEFIA">
+<section class="sec" id="por-que" data-screen-label="Por qué Tuvaso">
   <div class="wrap">
     <div class="shead">
-      <span class="eyebrow blue">La marca</span>
-      <h2 class="h2">Por qué un SEFIA y no cualquier estufa.</h2>
-      <p class="lede">Acero de verdad, doble combustión y una línea pensada para casas uruguayas:
-        del monoambiente de 55 m² al salón de 250 m².</p>
+      <span class="eyebrow">Por qué Tuvaso</span>
+      <h2 class="h2">Un vaso que no termina en la basura.</h2>
+      <p class="lede">El descartable dura lo que dura el trago. El nuestro dura años: vuelve a casa
+        con tu invitado, se lava y se usa otra vez — con tu marca encima todo ese tiempo.</p>
     </div>
-    <div class="grid">
-      <figure>
-        <img src="uploads/toledo-calefactorlena-encasa.png" alt="Calefactor a leña SEFIA Toledo panorámico encendido en un living" loading="lazy">
-        <figcaption>TOLEDO panorámico — el mayor de la línea, calienta hasta 250 m².</figcaption>
-      </figure>
-      <div class="pillars">
-        <div>
-          <span class="n">01</span>
-          <h3>Doble combustión</h3>
-          <p>Quema también los gases: más calor con la misma leña y mucho menos humo por el caño.</p>
+    <div class="pillars">
+      <article>
+        <span class="n">01</span>
+        <h3>Sustentable de verdad</h3>
+        <p>Un solo vaso reemplaza cientos de descartables. Menos plástico de un uso, menos bolsas
+          de basura al final del evento.</p>
+      </article>
+      <article>
+        <span class="n">02</span>
+        <h3>Tu marca en la mano</h3>
+        <p>Impresión a todo color con tu logo, el nombre del cumpleaños o el arte de tu fiesta.
+          Te pasamos el diseño para aprobar antes de imprimir.</p>
+      </article>
+      <article>
+        <span class="n">03</span>
+        <h3>Resistente</h3>
+        <p>Plástico rígido apto para uso alimentario: no se raja si cae, aguanta el lavado y
+          se apila para guardar.</p>
+      </article>
+      <article>
+        <span class="n">04</span>
+        <h3>Souvenir incluido</h3>
+        <p>El invitado se lo lleva. Tu evento sigue en su cocina meses después — el recuerdo más
+          barato por persona que vas a encontrar.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="productos" data-screen-label="Productos">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Productos</span>
+      <h2 class="h2">Elegí el tamaño.</h2>
+      <p class="lede">Cuatro medidas que cubren casi todo: del trago corto de la barra a la jarra
+        de la mesa. Todas se personalizan igual.</p>
+    </div>
+    <div class="prods">
+      <article class="prod">
+        <div class="ph"><svg viewBox="0 0 160 200"><path d="M42 62h76l-11 118a13 13 0 0 1-13 12H66a13 13 0 0 1-13-12z" fill="#2b2280"></path><ellipse cx="80" cy="62" rx="38" ry="9" fill="#382e9c"></ellipse><rect x="50" y="104" width="60" height="34" rx="4" fill="rgba(216,245,78,.14)"></rect></svg></div>
+        <div class="body">
+          <span class="ml">330 ml</span>
+          <h3>Vaso corto</h3>
+          <p>El clásico de barra. Ideal para cerveza tirada, refresco y tragos cortos.</p>
         </div>
-        <div>
-          <span class="n">02</span>
-          <h3>Chapa de acero al carbono</h3>
-          <p>Cuerpo macizo en grafito, vidrio panorámico y puertas que cierran como el primer día.</p>
+      </article>
+      <article class="prod">
+        <div class="ph"><svg viewBox="0 0 160 200"><path d="M40 40h80l-12 140a13 13 0 0 1-13 12H65a13 13 0 0 1-13-12z" fill="#2b2280"></path><ellipse cx="80" cy="40" rx="40" ry="9" fill="#382e9c"></ellipse><rect x="48" y="92" width="64" height="38" rx="4" fill="rgba(216,245,78,.14)"></rect></svg></div>
+        <div class="body">
+          <span class="ml">500 ml</span>
+          <h3>Vaso alto</h3>
+          <p>El más pedido para fiestas y eventos empresariales. Buena superficie para el logo.</p>
         </div>
-        <div>
-          <span class="n">03</span>
-          <h3>Con horno o cocina</h3>
-          <p>ALMERÍA, VIGO y CÁDIZ traen horno integrado. ALICANTE es cocina a leña completa.</p>
+      </article>
+      <article class="prod">
+        <div class="ph"><svg viewBox="0 0 160 200"><path d="M34 26h92l-14 154a13 13 0 0 1-13 12H61a13 13 0 0 1-13-12z" fill="#2b2280"></path><ellipse cx="80" cy="26" rx="46" ry="10" fill="#382e9c"></ellipse><rect x="44" y="84" width="72" height="46" rx="4" fill="rgba(216,245,78,.14)"></rect></svg></div>
+        <div class="body">
+          <span class="ml">1 litro</span>
+          <h3>Vaso litro</h3>
+          <p>Para festivales, canchas y previas. Menos vueltas a la barra por persona.</p>
         </div>
-        <div>
-          <span class="n">04</span>
-          <h3>Pellet automático</h3>
-          <p>7, 9 y 11 kW: prendés con una perilla, regula solo y no te llena la casa de ceniza.</p>
+      </article>
+      <article class="prod">
+        <div class="ph"><svg viewBox="0 0 160 200"><path d="M36 30h84l-12 150a13 13 0 0 1-13 12H61a13 13 0 0 1-13-12z" fill="#2b2280"></path><ellipse cx="80" cy="30" rx="42" ry="10" fill="#382e9c"></ellipse><path d="M120 66c22 2 26 46 2 54l-2-14c10-6 9-24-1-26z" fill="#382e9c"></path><rect x="46" y="86" width="64" height="44" rx="4" fill="rgba(216,245,78,.14)"></rect></svg></div>
+        <div class="body">
+          <span class="ml">1 litro · con asa</span>
+          <h3>Jarra</h3>
+          <p>Para la mesa: agua, sangría o cerveza compartida. Se personaliza de los dos lados.</p>
         </div>
+      </article>
+    </div>
+    <p class="note">Demo — las medidas y descripciones son de referencia y se ajustan al catálogo real.</p>
+  </div>
+</section>
+
+<section class="sec" id="personalizar" data-screen-label="Personalizador">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Personalizá</span>
+      <h2 class="h2">Diseñá tu vaso ahora mismo.</h2>
+      <p class="lede">Subí tu logo, elegí color y tipografía, y mirá cómo queda impreso. Después
+        descargás la maqueta o nos la mandás por WhatsApp — sin llamadas ni idas y vueltas.</p>
+    </div>
+
+    <div class="lab">
+      <div class="stage">
+        <div class="box">
+          <svg id="cup" viewBox="0 56 320 330" role="img" aria-label="Vista previa del vaso personalizado">
+            <defs>
+              <linearGradient id="cylGrad" x1="0" y1="0" x2="1" y2="0"></linearGradient>
+              <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="7"></feGaussianBlur>
+              </filter>
+              <clipPath id="cupClip"><path id="clipBody" d=""></path></clipPath>
+              <path id="p1" d="" fill="none"></path>
+              <path id="p2" d="" fill="none"></path>
+              <clipPath id="logoClip"><rect id="logoClipR" x="0" y="0" width="0" height="0"></rect></clipPath>
+            </defs>
+
+            <ellipse id="floor" cx="160" cy="362" rx="70" ry="10" fill="#05030f" opacity=".55"
+              filter="url(#blur10)"></ellipse>
+            <path id="handle" d="" fill="none" stroke="none" stroke-width="17" stroke-linecap="round"></path>
+            <path id="body" d="" fill="#2b2280"></path>
+
+            <g clip-path="url(#cupClip)">
+              <image id="logoImg" x="0" y="0" width="0" height="0" preserveAspectRatio="xMidYMid meet"></image>
+              <text id="t1" text-anchor="middle"><textPath id="tp1" href="#p1" startOffset="50%"></textPath></text>
+              <text id="t2" text-anchor="middle"><textPath id="tp2" href="#p2" startOffset="50%"></textPath></text>
+              <rect id="cyl" x="0" y="0" width="320" height="400" fill="url(#cylGrad)"></rect>
+            </g>
+
+            <ellipse id="rimOut" cx="160" cy="0" rx="0" ry="0" fill="#382e9c"></ellipse>
+            <ellipse id="rimIn" cx="160" cy="0" rx="0" ry="0" fill="#120d38"></ellipse>
+            <ellipse id="rimHi" cx="160" cy="0" rx="0" ry="0" fill="#fff" opacity=".1"></ellipse>
+            <text id="meas" x="-999" y="-999" visibility="hidden"></text>
+          </svg>
+        </div>
+        <div class="cap">
+          <span>Vista previa en vivo — <b id="capSize">500 ml</b></span>
+          <span id="capPrint">Impresión 1 color</span>
+        </div>
+      </div>
+
+      <div class="panelc">
+        <div class="field">
+          <span class="lbl">Empezá con una idea</span>
+          <div class="presets">
+            <button class="chip" type="button" data-preset="empresa">🏢 Evento de empresa</button>
+            <button class="chip" type="button" data-preset="quince">🎉 Cumple de 15</button>
+            <button class="chip" type="button" data-preset="boliche">🍻 Bar o boliche</button>
+            <button class="chip" type="button" data-preset="casamiento">💍 Casamiento</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="lbl">Tamaño</span>
+          <div class="segs" id="sizes" role="group" aria-label="Tamaño del vaso">
+            <button class="seg" type="button" data-size="330" aria-pressed="false">330 ml</button>
+            <button class="seg" type="button" data-size="500" aria-pressed="true">500 ml</button>
+            <button class="seg" type="button" data-size="1000" aria-pressed="false">1 litro</button>
+            <button class="seg" type="button" data-size="jarra" aria-pressed="false">Jarra 1 L</button>
+          </div>
+        </div>
+
+        <div class="row2" style="margin-bottom:20px">
+          <div class="field">
+            <span class="lbl">Color del vaso</span>
+            <div class="swatches" id="cupColors" role="group" aria-label="Color del vaso"></div>
+          </div>
+          <div class="field">
+            <span class="lbl">Color de impresión</span>
+            <div class="swatches" id="inkColors" role="group" aria-label="Color de impresión"></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="lbl">Tu logo</span>
+          <label class="drop" id="drop">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+              stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"></path><path d="m7 9 5-5 5 5"></path>
+              <path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"></path></svg></span>
+            <span class="tx"><b id="dropName">Subí tu logo</b>
+              <span id="dropHint">PNG, JPG o SVG — se ve al instante sobre el vaso</span></span>
+            <input id="logoFile" type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp">
+          </label>
+          <div class="logorow" id="logoRow" hidden>
+            <span class="lbl" style="margin:0">Tamaño</span>
+            <input id="logoSize" type="range" min="50" max="130" value="100" aria-label="Tamaño del logo">
+            <button class="linkbtn" type="button" id="logoDel">Quitar</button>
+          </div>
+        </div>
+
+        <div class="row2" style="margin-bottom:20px">
+          <div class="field">
+            <label for="l1">Texto principal</label>
+            <input id="l1" type="text" maxlength="16" value="TU MARCA" placeholder="Tu marca o nombre">
+          </div>
+          <div class="field">
+            <label for="l2">Segunda línea</label>
+            <input id="l2" type="text" maxlength="26" value="EVENTO 2026" placeholder="Fecha, lugar o frase">
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="lbl">Tipografía</span>
+          <div class="segs" id="fonts" role="group" aria-label="Tipografía">
+            <button class="seg" type="button" data-font="moderna" aria-pressed="true">Moderna</button>
+            <button class="seg" type="button" data-font="elegante" aria-pressed="false">Elegante</button>
+            <button class="seg" type="button" data-font="fuerte" aria-pressed="false">Fuerte</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="lbl">Cantidad</span>
+          <div class="qty">
+            <button type="button" id="qMinus" aria-label="Restar 50 vasos">−</button>
+            <input id="qty" type="text" inputmode="numeric" value="300" aria-label="Cantidad de vasos">
+            <button type="button" id="qPlus" aria-label="Sumar 50 vasos">+</button>
+            <span class="hint">vasos</span>
+          </div>
+        </div>
+
+        <dl class="summary" id="summary">
+          <div><dt>Modelo</dt><dd id="sSize">Vaso 500 ml</dd></div>
+          <div><dt>Color del vaso</dt><dd id="sCup">Azul noche</dd></div>
+          <div><dt>Impresión</dt><dd id="sInk">Lima — 1 color</dd></div>
+          <div><dt>Arte</dt><dd id="sArt">Texto: TU MARCA</dd></div>
+          <div><dt>Cantidad</dt><dd id="sQty">300 vasos</dd></div>
+        </dl>
+
+        <div class="actions">
+          <a class="btn btn-wa" id="waDesign" href="https://wa.me/59899284127" target="_blank" rel="noopener">
+            <svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Pedir presupuesto</a>
+          <button class="btn btn-ghost" type="button" id="dlBtn">
+            <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12"></path>
+              <path d="m7 11 5 5 5-5"></path><path d="M4 20h16"></path></svg>Descargar maqueta</button>
+        </div>
+        <p class="note">La vista previa es orientativa: el arte final se maqueta con tu logo en
+          vectorial y se manda a aprobar antes de imprimir.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sec cat" id="modelos" data-screen-label="Catálogo SEFIA">
+<section class="sec" id="impacto" data-screen-label="Calculadora de impacto">
   <div class="wrap">
     <div class="shead">
-      <span class="eyebrow">Catálogo SEFIA 2026</span>
-      <h2 class="h2">Elegí tu calor.</h2>
-      <p class="lede">Filtrá por tipo y por los metros que querés calefaccionar.
-        Precios en dólares y envíos a todo el país.</p>
+      <span class="eyebrow">Cuántos necesito</span>
+      <h2 class="h2">Hacé la cuenta de tu evento.</h2>
+      <p class="lede">Movés los dos controles y te decimos cuántos vasos pedir y cuántos descartables
+        te ahorrás con ellos.</p>
     </div>
-    <input class="fx" type="radio" name="tipo" id="f-todos" checked>
-    <input class="fx" type="radio" name="tipo" id="f-lena">
-    <input class="fx" type="radio" name="tipo" id="f-horno">
-    <input class="fx" type="radio" name="tipo" id="f-empotrar">
-    <input class="fx" type="radio" name="tipo" id="f-pellet">
-    <input class="fx" type="radio" name="tipo" id="f-kit">
-    <input class="fx" type="radio" name="tam" id="m-todos" checked>
-    <input class="fx" type="radio" name="tam" id="m-chico">
-    <input class="fx" type="radio" name="tam" id="m-medio">
-    <input class="fx" type="radio" name="tam" id="m-grande">
-    <div class="filters">
-      <div class="frow"><i>Tipo</i>
-        <label class="chip" for="f-todos">Todos</label>
-        <label class="chip" for="f-lena">Leña</label>
-        <label class="chip" for="f-horno">Con horno</label>
-        <label class="chip" for="f-empotrar">De empotrar</label>
-        <label class="chip" for="f-pellet">Pellet</label>
-        <label class="chip" for="f-kit">Kits de caños</label>
+
+    <div class="calc">
+      <div class="panel">
+        <div class="range">
+          <div class="top"><span>Invitados</span><b id="vGuests">150</b></div>
+          <input id="guests" type="range" min="20" max="1000" step="10" value="150"
+            aria-label="Cantidad de invitados">
+        </div>
+        <div class="range" style="margin-bottom:0">
+          <div class="top"><span>Duración</span><b id="vHours">6 h</b></div>
+          <input id="hours" type="range" min="2" max="12" step="1" value="6"
+            aria-label="Duración del evento en horas">
+        </div>
       </div>
-      <div class="frow"><i>Metros</i>
-        <label class="chip" for="m-todos">Cualquiera</label>
-        <label class="chip" for="m-chico">Hasta 90 m²</label>
-        <label class="chip" for="m-medio">100 a 150 m²</label>
-        <label class="chip" for="m-grande">Más de 150 m²</label>
+
+      <div class="out">
+        <div><b id="oCups">170</b><span>vasos sugeridos (incluye 10 % de reposición)</span></div>
+        <div><b id="oAvoid">990</b><span>vasos descartables evitados en este evento</span></div>
+        <div><b id="oKg">5 kg</b><span>de plástico de un solo uso que no se tira</span></div>
+        <div><b id="oLife">34.000</b><span>usos disponibles si los reutilizás (200 por vaso)</span></div>
       </div>
     </div>
-    <div class="pgrid">
-      <a class="pcard" data-cat="lena" data-m="chico" href="#sp-madrid">
-        <div class="shot">
-          <img src="uploads/madrid-calefactorlena.png" alt="Calefactor a leña SEFIA Madrid" loading="lazy">
-          <span class="m2">Hasta 55 m²</span>
-        </div>
-        <div class="body">
-          <h3>MADRID</h3>
-          <div class="pills"><span class="pill">Kit incluido</span></div>
-          <div class="price"><b>U$S 569</b><span>con kit a techo · a pared U$S 599</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="lena" data-m="chico" href="#sp-barcelona">
-        <div class="shot">
-          <img src="uploads/Barcelona-calefactorlena.png" alt="Calefactor a leña SEFIA Barcelona" loading="lazy">
-          <span class="m2">Hasta 90 m²</span>
-        </div>
-        <div class="body">
-          <h3>BARCELONA</h3>
-          <div class="price"><b>U$S 690</b><span>equipo · con kit desde U$S 969</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="lena" data-m="chico" href="#sp-murcia">
-        <div class="shot">
-          <img src="uploads/murcia-calefactorlena.png" alt="Calefactor a leña SEFIA Murcia esquinero" loading="lazy">
-          <span class="m2">Hasta 90 m²</span>
-        </div>
-        <div class="body">
-          <h3>MURCIA</h3>
-          <div class="pills"><span class="pill b">Esquinero</span></div>
-          <div class="price"><b>U$S 790</b><span>equipo · con kit desde U$S 1069</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="lena" data-m="medio" href="#sp-valencia">
-        <div class="shot">
-          <img src="uploads/valencia-calefactorlena.png" alt="Calefactor a leña SEFIA Valencia" loading="lazy">
-          <span class="m2">Hasta 110 m²</span>
-        </div>
-        <div class="body">
-          <h3>VALENCIA</h3>
-          <div class="price"><b>U$S 760</b><span>equipo · con kit desde U$S 1039</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="lena horno" data-m="medio" href="#sp-almeria">
-        <div class="shot">
-          <img src="uploads/almeria-calefactorlena.png" alt="Calefactor a leña SEFIA Almería con horno" loading="lazy">
-          <span class="m2">Hasta 110 m²</span>
-        </div>
-        <div class="body">
-          <h3>ALMERÍA</h3>
-          <div class="pills"><span class="pill">Con horno</span></div>
-          <div class="price"><b>U$S 890</b><span>equipo · con kit desde U$S 1169</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="lena horno" data-m="medio" href="#sp-alicante">
-        <div class="shot">
-          <img src="uploads/alicante-calefactorlena.png" alt="Cocina a leña SEFIA Alicante" loading="lazy">
-          <span class="m2">Hasta 110 m²</span>
-        </div>
-        <div class="body">
-          <h3>ALICANTE</h3>
-          <div class="pills"><span class="pill">Cocina a leña</span></div>
-          <div class="price"><b>U$S 1190</b><span>equipo · calienta y cocina</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="lena" data-m="medio" href="#sp-sevilla">
-        <div class="shot">
-          <img src="uploads/sevilla-calefactorlena.png" alt="Calefactor a leña SEFIA Sevilla" loading="lazy">
-          <span class="m2">Hasta 150 m²</span>
-        </div>
-        <div class="body">
-          <h3>SEVILLA</h3>
-          <div class="price"><b>U$S 990</b><span>equipo · con kit desde U$S 1269</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="lena" data-m="medio" href="#sp-oviedo">
-        <div class="shot">
-          <img src="uploads/oviedo-calefactorlena.png" alt="Calefactor a leña SEFIA Oviedo esquinero" loading="lazy">
-          <span class="m2">Hasta 150 m²</span>
-        </div>
-        <div class="body">
-          <h3>OVIEDO</h3>
-          <div class="pills"><span class="pill b">Esquinero</span></div>
-          <div class="price"><b>U$S 1190</b><span>equipo · con kit desde U$S 1469</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="lena horno" data-m="medio" href="#sp-vigo">
-        <div class="shot">
-          <img src="uploads/vigo-calefactorlena.png" alt="Calefactor a leña SEFIA Vigo con horno" loading="lazy">
-          <span class="m2">Hasta 150 m²</span>
-        </div>
-        <div class="body">
-          <h3>VIGO</h3>
-          <div class="pills"><span class="pill">Con horno</span></div>
-          <div class="price"><b>U$S 1390</b><span>equipo · con kit desde U$S 1669</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="lena horno" data-m="medio" href="#sp-cadiz">
-        <div class="shot">
-          <img src="uploads/cadiz-calefactorlena.png" alt="Calefactor a leña SEFIA Cádiz con horno" loading="lazy">
-          <span class="m2">Hasta 150 m²</span>
-        </div>
-        <div class="body">
-          <h3>CÁDIZ</h3>
-          <div class="pills"><span class="pill">Con horno</span></div>
-          <div class="price"><b>U$S 1690</b><span>equipo · con kit desde U$S 1969</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="lena" data-m="grande" href="#sp-mallorca">
-        <div class="shot">
-          <img src="uploads/mallorca-calefactorlena.png" alt="Calefactor a leña SEFIA Mallorca" loading="lazy">
-          <span class="m2">Hasta 200 m²</span>
-        </div>
-        <div class="body">
-          <h3>MALLORCA</h3>
-          <div class="price"><b>U$S 1299</b><span>equipo · con kit desde U$S 1578</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="lena" data-m="grande" href="#sp-toledo">
-        <div class="shot">
-          <img src="uploads/toledo-calefactorlena.png" alt="Calefactor a leña SEFIA Toledo panorámico" loading="lazy">
-          <span class="m2">Hasta 250 m²</span>
-        </div>
-        <div class="body">
-          <h3>TOLEDO</h3>
-          <div class="pills"><span class="pill">Panorámico</span></div>
-          <div class="price"><b>U$S 1790</b><span>equipo · con kit desde U$S 2069</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="empotrar" data-m="medio" href="#sp-gijon">
-        <div class="shot">
-          <img src="uploads/gijon-calefactorlena-encastrar.png" alt="Calefactor a leña SEFIA Gijón para empotrar" loading="lazy">
-          <span class="m2">Hasta 100 m²</span>
-        </div>
-        <div class="body">
-          <h3>GIJÓN</h3>
-          <div class="pills"><span class="pill b">De empotrar</span></div>
-          <div class="price"><b>U$S 1390</b><span>equipo · insertable a pared</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="empotrar" data-m="medio" href="#sp-ibiza">
-        <div class="shot">
-          <img src="uploads/ibiza-calefactorlena-encastrar.png" alt="Calefactor a leña SEFIA Ibiza para empotrar" loading="lazy">
-          <span class="m2">Hasta 150 m²</span>
-        </div>
-        <div class="body">
-          <h3>IBIZA</h3>
-          <div class="pills"><span class="pill b">De empotrar</span></div>
-          <div class="price"><b>U$S 1690</b><span>equipo · insertable a pared</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="empotrar" data-m="grande" href="#sp-girona">
-        <div class="shot">
-          <img src="uploads/girona-calefactorlena-encastrar.png" alt="Calefactor a leña SEFIA Girona para empotrar con turbina" loading="lazy">
-          <span class="m2">Hasta 250 m²</span>
-        </div>
-        <div class="body">
-          <h3>GIRONA</h3>
-          <div class="pills"><span class="pill b">De empotrar</span><span class="pill">Con turbina</span></div>
-          <div class="price"><b>U$S 1990</b><span>equipo · reparte más rápido</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="empotrar" data-m="grande" href="#sp-bilbao">
-        <div class="shot">
-          <img src="uploads/bilbao-calefactorlena-encastrar.png" alt="Calefactor a leña SEFIA Bilbao para empotrar con turbina" loading="lazy">
-          <span class="m2">Hasta 250 m²</span>
-        </div>
-        <div class="body">
-          <h3>BILBAO</h3>
-          <div class="pills"><span class="pill b">De empotrar</span><span class="pill">Con turbina</span></div>
-          <div class="price"><b>U$S 3390</b><span>equipo · el más ancho</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="pellet" data-m="chico" href="#sp-pellet7">
-        <div class="shot">
-          <img src="uploads/pelleters-7kw.png" alt="Calefactor a pellet SEFIA PKW 7 kW" loading="lazy">
-          <span class="m2">Hasta 75 m²</span>
-        </div>
-        <div class="body">
-          <h3>PELLET 7 kW</h3>
-          <div class="pills"><span class="pill">Kit incluido</span></div>
-          <div class="price"><b>U$S 1290</b><span>prende con una perilla</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="pellet" data-m="chico" href="#sp-pellet9">
-        <div class="shot">
-          <img src="uploads/pelleters-7kw.png" alt="Calefactor a pellet SEFIA 9 kW" loading="lazy">
-          <span class="m2">Hasta 90 m²</span>
-        </div>
-        <div class="body">
-          <h3>PELLET 9 kW</h3>
-          <div class="pills"><span class="pill">Kit incluido</span></div>
-          <div class="price"><b>U$S 1390</b><span>regula solo, no ensucia</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="pellet" data-m="medio" href="#sp-pellet11">
-        <div class="shot">
-          <img src="uploads/pelleters-7kw.png" alt="Calefactor a pellet SEFIA 11 kW" loading="lazy">
-          <span class="m2">Hasta 110 m²</span>
-        </div>
-        <div class="body">
-          <h3>PELLET 11 kW</h3>
-          <div class="pills"><span class="pill">Kit incluido</span></div>
-          <div class="price"><b>U$S 1490</b><span>el más potente</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="kit" href="#sp-kits">
-        <div class="shot">
-          <img src="uploads/kit-canos-paratecho.png" alt="Kit de caños a techo SEFIA" loading="lazy">
-        </div>
-        <div class="body">
-          <h3>Kit de caños · techo</h3>
-          <div class="pills"><span class="pill">Salida vertical</span></div>
-          <div class="price"><b>U$S 279</b><span>negro o inoxidable</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-      <a class="pcard" data-cat="kit" href="#sp-kits">
-        <div class="shot">
-          <img src="uploads/kit-canos-techopared.png" alt="Kit de caños techo-pared SEFIA" loading="lazy">
-        </div>
-        <div class="body">
-          <h3>Kit de caños · pared</h3>
-          <div class="pills"><span class="pill">Salida a pared</span></div>
-          <div class="price"><b>U$S 439</b><span>negro o inoxidable</span></div>
-          <div class="more">Ver ficha<span>&rarr;</span></div>
-        </div>
-      </a>
-
-    </div>
-    <div class="empty">No hay equipos que combinen ese tipo con esos metros.<br>
-      Probá con <b>Cualquiera</b> en metros — o <span>escribinos y te buscamos el equipo</span>.</div>
-    <p class="helper"><span>
-      ¿No sabés cuál elegir? Escribinos y te asesoramos por tus m² &rarr;</span></p>
+    <p class="note">Estimaciones de demostración: 1,1 vasos por invitado, un consumo por hora y
+      5 g por vaso descartable.</p>
   </div>
 </section>
 
-<!-- Fichas técnicas -->
-<div id="sp-madrid" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">MADRID</h3>
-    <div class="sheet-body">
-      <div class="gal"><img class="norm" src="uploads/madrid-calefactorlena.png" alt="MADRID" loading="lazy"><img class="casa" src="uploads/madrid-calefacotrlena-encasa.png" alt="MADRID instalado" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 55 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>67 × 36,5 × 49 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Doble combustión · Kit de caños incluido</span></li><li><b>Precio</b><span>U$S 569 con kit a techo · U$S 599 con kit a pared</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-madrid.jpg" alt="Ficha técnica MADRID SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-barcelona" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">BARCELONA</h3>
-    <div class="sheet-body">
-      <div class="gal"><img class="norm" src="uploads/Barcelona-calefactorlena.png" alt="BARCELONA" loading="lazy"><img class="casa" src="uploads/Barcelona-calefactorlena-encasa.png" alt="BARCELONA instalado" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 90 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>78 × 38 × 51 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Doble combustión</span></li><li><b>Precio</b><span>Equipo U$S 690 · con kit a techo U$S 969 · a pared U$S 1129</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-barcelona.jpg" alt="Ficha técnica BARCELONA SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-murcia" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">MURCIA</h3>
-    <div class="sheet-body">
-      <div class="gal"><img class="norm" src="uploads/murcia-calefactorlena.png" alt="MURCIA" loading="lazy"><img class="casa" src="uploads/murcia-calefactorlena-encasda.png" alt="MURCIA instalado" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 90 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>78 × 60 × 50 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Esquinero · Doble combustión</span></li><li><b>Precio</b><span>Equipo U$S 790 · con kit a techo U$S 1069 · a pared U$S 1229</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-murcia.jpg" alt="Ficha técnica MURCIA SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-valencia" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">VALENCIA</h3>
-    <div class="sheet-body">
-      <div class="gal"><img class="norm" src="uploads/valencia-calefactorlena.png" alt="VALENCIA" loading="lazy"><img class="casa" src="uploads/valencia-calefactorlena-encasa.png" alt="VALENCIA instalado" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 110 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>78 × 45 × 51 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Doble combustión</span></li><li><b>Precio</b><span>Equipo U$S 760 · con kit a techo U$S 1039 · a pared U$S 1199</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-valencia.jpg" alt="Ficha técnica VALENCIA SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-almeria" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">ALMERÍA</h3>
-    <div class="sheet-body">
-      <div class="gal one"><img class="norm" src="uploads/almeria-calefactorlena.png" alt="ALMERÍA" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 110 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>97 × 42,5 × 43 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Horno integrado · Doble combustión</span></li><li><b>Precio</b><span>Equipo U$S 890 · con kit a techo U$S 1169 · a pared U$S 1329</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-almeria.jpg" alt="Ficha técnica ALMERÍA SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-alicante" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">ALICANTE</h3>
-    <div class="sheet-body">
-      <div class="gal one"><img class="norm" src="uploads/alicante-calefactorlena.png" alt="ALICANTE" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 110 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>76 × 75 × 55 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Cocina a leña · Horno</span></li><li><b>Precio</b><span>U$S 1190</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-alicante.jpg" alt="Ficha técnica ALICANTE SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-sevilla" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">SEVILLA</h3>
-    <div class="sheet-body">
-      <div class="gal"><img class="norm" src="uploads/sevilla-calefactorlena.png" alt="SEVILLA" loading="lazy"><img class="casa" src="uploads/sevilla-calefactor-encasa.png" alt="SEVILLA instalado" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 150 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>78 × 60 × 51 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Doble combustión</span></li><li><b>Precio</b><span>Equipo U$S 990 · con kit a techo U$S 1269 · a pared U$S 1429</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-sevilla.jpg" alt="Ficha técnica SEVILLA SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-oviedo" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">OVIEDO</h3>
-    <div class="sheet-body">
-      <div class="gal"><img class="norm" src="uploads/oviedo-calefactorlena.png" alt="OVIEDO" loading="lazy"><img class="casa" src="uploads/oviedo-calefactorlena-encasa.png" alt="OVIEDO instalado" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 150 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>78 × 68 × 50 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Esquinero · Doble combustión</span></li><li><b>Precio</b><span>Equipo U$S 1190 · con kit a techo U$S 1469 · a pared U$S 1629</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-oviedo.jpg" alt="Ficha técnica OVIEDO SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-vigo" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">VIGO</h3>
-    <div class="sheet-body">
-      <div class="gal one"><img class="norm" src="uploads/vigo-calefactorlena.png" alt="VIGO" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 150 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>97 × 51 × 45 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Horno integrado · Doble combustión</span></li><li><b>Precio</b><span>Equipo U$S 1390 · con kit a techo U$S 1669 · a pared U$S 1829</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-vigo.jpg" alt="Ficha técnica VIGO SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-cadiz" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">CÁDIZ</h3>
-    <div class="sheet-body">
-      <div class="gal one"><img class="norm" src="uploads/cadiz-calefactorlena.png" alt="CÁDIZ" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 150 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>97 × 60 × 43 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Horno integrado · Doble combustión</span></li><li><b>Precio</b><span>Equipo U$S 1690 · con kit a techo U$S 1969 · a pared U$S 2129</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-cadiz.jpg" alt="Ficha técnica CÁDIZ SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-mallorca" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">MALLORCA</h3>
-    <div class="sheet-body">
-      <div class="gal"><img class="norm" src="uploads/mallorca-calefactorlena.png" alt="MALLORCA" loading="lazy"><img class="casa" src="uploads/mallorca-calefactorlena-encasa.png" alt="MALLORCA instalado" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 200 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>78 × 77,5 × 51 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Doble combustión</span></li><li><b>Precio</b><span>Equipo U$S 1299 · con kit a techo U$S 1578 · a pared U$S 1738</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-mallorca.jpg" alt="Ficha técnica MALLORCA SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-toledo" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">TOLEDO</h3>
-    <div class="sheet-body">
-      <div class="gal"><img class="norm" src="uploads/toledo-calefactorlena.png" alt="TOLEDO" loading="lazy"><img class="casa" src="uploads/toledo-calefactorlena-encasa.png" alt="TOLEDO instalado" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 250 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>78 × 95 × 51 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Visor panorámico · Doble combustión</span></li><li><b>Precio</b><span>Equipo U$S 1790 · con kit a techo U$S 2069 · a pared U$S 2229</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-toledo.jpg" alt="Ficha técnica TOLEDO SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-gijon" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">GIJÓN</h3>
-    <div class="sheet-body">
-      <div class="gal one"><img class="norm" src="uploads/gijon-calefactorlena-encastrar.png" alt="GIJÓN" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 100 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>60 × 63 × 51 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>De empotrar · Doble combustión</span></li><li><b>Precio</b><span>Equipo U$S 1390</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-gijon.jpg" alt="Ficha técnica GIJÓN SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-ibiza" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">IBIZA</h3>
-    <div class="sheet-body">
-      <div class="gal one"><img class="norm" src="uploads/ibiza-calefactorlena-encastrar.png" alt="IBIZA" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 150 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>60 × 80 × 51 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>De empotrar · Doble combustión</span></li><li><b>Precio</b><span>Equipo U$S 1690</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-ibiza.jpg" alt="Ficha técnica IBIZA SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-girona" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">GIRONA</h3>
-    <div class="sheet-body">
-      <div class="gal one"><img class="norm" src="uploads/girona-calefactorlena-encastrar.png" alt="GIRONA" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 250 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>60 × 63 × 68 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>De empotrar · Con turbina</span></li><li><b>Precio</b><span>Equipo U$S 1990</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-girona.jpg" alt="Ficha técnica GIRONA SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-bilbao" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">BILBAO</h3>
-    <div class="sheet-body">
-      <div class="gal one"><img class="norm" src="uploads/bilbao-calefactorlena-encastrar.png" alt="BILBAO" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 250 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>60 × 98 × 68 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>De empotrar · Con turbina</span></li><li><b>Precio</b><span>Equipo U$S 3390</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-bilbao.jpg" alt="Ficha técnica BILBAO SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-pellet7" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">PELLET 7 kW</h3>
-    <div class="sheet-body">
-      <div class="gal one"><img class="norm" src="uploads/pelleters-7kw.png" alt="PELLET 7 kW" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 75 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>73 × 43 × 45 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Alimentación automática · Kit de caños incluido</span></li><li><b>Precio</b><span>U$S 1290 · kit de caños incluido</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-pellet7.jpg" alt="Ficha técnica PELLET 7 kW SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-pellet9" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">PELLET 9 kW</h3>
-    <div class="sheet-body">
-      <div class="gal one"><img class="norm" src="uploads/pelleters-7kw.png" alt="PELLET 9 kW" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 90 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>91 × 44 × 46 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Alimentación automática · Kit de caños incluido</span></li><li><b>Precio</b><span>U$S 1390 · kit de caños incluido</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-pellet9.jpg" alt="Ficha técnica PELLET 9 kW SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-pellet11" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">PELLET 11 kW</h3>
-    <div class="sheet-body">
-      <div class="gal one"><img class="norm" src="uploads/pelleters-7kw.png" alt="PELLET 11 kW" loading="lazy"></div>
-      <ul class="specs"><li><b>Calienta</b><span>Hasta 110 m²</span></li><li><b>Material</b><span>Chapa de acero — Carbono</span></li><li><b>Color</b><span>Grafito</span></li><li><b>Medidas</b><span>97 × 46 × 50 cm · alto × ancho × prof</span></li><li><b>Destacado</b><span>Alimentación automática · Kit de caños incluido</span></li><li><b>Precio</b><span>U$S 1490 · kit de caños incluido</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-pellet11.jpg" alt="Ficha técnica PELLET 11 kW SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-<div id="sp-kits" class="modal">
-  <a href="#_" class="modal-back" aria-label="Cerrar ficha"></a>
-  <div class="sheet">
-    <a href="#_" class="x" aria-label="Cerrar">&#10005;</a>
-    <h3 class="mt">Kits de caños</h3>
-    <div class="sheet-body">
-      <div class="gal"><img class="norm" src="uploads/kit-canos-paratecho.png" alt="Kit de caños a techo" loading="lazy"><img class="norm" src="uploads/kit-canos-techopared.png" alt="Kit de caños a pared" loading="lazy"></div>
-      <ul class="specs"><li><b>Tipo</b><span>Kit de caños de conexión</span></li><li><b>Terminación</b><span>Inoxidable o negro</span></li><li><b>Opciones</b><span>Salida a techo o a pared</span></li><li><b>Precio</b><span>A techo U$S 279 · A pared U$S 439</span></li></ul>
-      <div class="fichah">Ficha del catálogo SEFIA</div>
-      <img class="ficha" src="uploads/spec-kits.jpg" alt="Ficha kits de caños SEFIA" loading="lazy">
-    </div>
-    <span class="wabtn"><svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Consultar por WhatsApp</span>
-  </div>
-</div>
-
-<section class="sec" data-screen-label="En casas de verdad">
+<section class="sec" id="casos" data-screen-label="Para quién">
   <div class="wrap">
     <div class="shead">
-      <span class="eyebrow">En casas de verdad</span>
-      <h2 class="h2">Así queda un SEFIA en casa.</h2>
-      <p class="lede">Sin fotos de banco de imágenes: equipos SEFIA en casas de clientes.</p>
+      <span class="eyebrow">Para quién</span>
+      <h2 class="h2">Donde haya barra, hay Tuvaso.</h2>
     </div>
-    <div class="gallery">
-      <figure><img src="uploads/instalacion-resenas.jpg" alt="Calefactor a leña SEFIA instalado en casa de cliente" loading="lazy"></figure>
-      <figure><img src="uploads/Instalacion-techo.jpg" alt="Calefactor SEFIA con salida de caños a techo" loading="lazy"></figure>
-      <figure><img src="uploads/instalacion-deempotrar.jpg" alt="Calefactor SEFIA de empotrar instalado" loading="lazy"></figure>
-      <figure><img src="uploads/instalacion-pellet.jpg" alt="Calefactor a pellet SEFIA instalado" loading="lazy"></figure>
-      <figure><img src="uploads/instalacion-resena2.jpg" alt="Calefactor SEFIA en casa de cliente" loading="lazy"></figure>
+    <div class="cases">
+      <article class="case"><span class="pin">Empresas</span><h3>Eventos corporativos</h3>
+        <p>Fin de año, lanzamientos y activaciones: tu logo en la mano de cada invitado toda la noche
+          y después en su casa.</p></article>
+      <article class="case"><span class="pin">Cumpleaños</span><h3>15, 18 y cumples</h3>
+        <p>Con el nombre, la fecha y el arte de la fiesta. Funciona como souvenir y baja el costo de
+          la barra.</p></article>
+      <article class="case"><span class="pin">Casamientos</span><h3>Casamientos</h3>
+        <p>Mesa puesta sin descartables. Los novios eligen color y tipografía y queda todo del mismo
+          palo.</p></article>
+      <article class="case"><span class="pin">Boliches</span><h3>Bares y boliches</h3>
+        <p>Sistema de vaso con depósito: el cliente lo devuelve o se lo lleva. Menos reposición
+          semana a semana.</p></article>
+      <article class="case"><span class="pin">Festivales</span><h3>Festivales y ferias</h3>
+        <p>Miles de vasos con el arte del festival. Menos limpieza al cierre y menos plástico
+          en el predio.</p></article>
+      <article class="case"><span class="pin">Deportes</span><h3>Clubes y canchas</h3>
+        <p>Escudo del club, colores del club. El hincha se lo lleva puesto — publicidad que dura.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="como" data-screen-label="Cómo funciona">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Cómo funciona</span>
+      <h2 class="h2">De la idea al evento en cuatro pasos.</h2>
+    </div>
+    <div class="steps">
+      <article class="step"><h3>Contanos el evento</h3>
+        <p>Fecha, cantidad de invitados y qué querés impreso. Te pasamos el presupuesto en el día.</p></article>
+      <article class="step"><h3>Diseño para aprobar</h3>
+        <p>Maquetamos el arte sobre el vaso y te lo mandamos. Se ajusta hasta que te guste.</p></article>
+      <article class="step"><h3>Producción</h3>
+        <p>Impresión y control de calidad unidad por unidad, con los tiempos acordados.</p></article>
+      <article class="step"><h3>Entrega</h3>
+        <p>Retiro en Montevideo o envío a cualquier punto del país, antes de la fecha del evento.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" data-screen-label="Testimonios">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Clientes</span>
+      <h2 class="h2">Lo que nos dicen después.</h2>
+    </div>
+    <div class="quotes">
+      <article class="quote"><span class="stars">★★★★★</span>
+        <p>“Pedimos 400 para la fiesta de fin de año. Cero bolsas de basura al final y la gente se
+          los llevó a todos.”</p>
+        <footer>Agencia · Montevideo</footer></article>
+      <article class="quote"><span class="stars">★★★★★</span>
+        <p>“El diseño lo tuvimos aprobado el mismo día y llegaron antes de lo que decían. Quedaron
+          impecables.”</p>
+        <footer>Cumpleaños de 15 · Canelones</footer></article>
+      <article class="quote"><span class="stars">★★★★★</span>
+        <p>“Cambiamos todo el descartable de la barra. Se paga solo en un par de meses.”</p>
+        <footer>Bar · Punta del Este</footer></article>
+    </div>
+    <p class="note">Testimonios de ejemplo para la demo — se reemplazan por reseñas reales.</p>
+  </div>
+</section>
+
+<section class="sec" id="faq" data-screen-label="Preguntas frecuentes">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Preguntas</span>
+      <h2 class="h2">Lo que siempre nos preguntan.</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>¿Cuál es la cantidad mínima?</summary>
+        <p>Trabajamos desde tiradas chicas para cumpleaños hasta miles de unidades para festivales.
+          Escribinos con tu número y te confirmamos el mínimo para ese modelo.</p></details>
+      <details><summary>¿Cuánto tarda la producción?</summary>
+        <p>Depende de la cantidad y de la fecha del evento. Lo primero es el diseño aprobado: a
+          partir de ahí te damos la fecha de entrega firme.</p></details>
+      <details><summary>¿Se pueden lavar en lavavajillas?</summary>
+        <p>Sí. Son de plástico rígido apto para uso alimentario y aguantan el lavado repetido sin
+          perder la impresión.</p></details>
+      <details><summary>¿Hacen envíos al interior?</summary>
+        <p>Sí, enviamos a los 19 departamentos por agencia. También podés retirar en Montevideo.</p></details>
+      <details><summary>¿Puedo mandar mi propio arte?</summary>
+        <p>Claro. Si tenés el logo en vectorial mejor, y si no lo tenés lo armamos nosotros sobre
+          lo que nos pases.</p></details>
     </div>
   </div>
 </section>
 
 <footer class="foot" data-screen-label="Footer">
-  <div class="wrap grid">
+  <div class="wrap">
     <div class="card">
-      <h2>¿Hablamos del invierno?</h2>
-      <p>Contanos qué espacio querés calefaccionar y te pasamos el modelo justo y su
-        precio en el día.</p>
-      <span class="btn btn-wa">
-        <svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Escribinos por WhatsApp</span>
+      <h2>¿Cuántos vasos necesitás?</h2>
+      <p>Contanos la fecha, la cantidad de invitados y qué querés impreso. Te pasamos el
+        presupuesto y la maqueta del vaso en el día.</p>
+      <a class="btn btn-wa" href="https://wa.me/59899284127?text=Hola%20Tuvaso%2C%20quiero%20cotizar%20vasos%20para%20mi%20evento" target="_blank" rel="noopener">
+        <svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>Escribinos por WhatsApp</a>
     </div>
     <div class="info">
-      <span class="mark">SEFIA</span>
-      <p>El calor de tu hogar.<br>Calefactores a leña y pellet — 21 modelos en catálogo.<br>
-        Envíos a todo el país.</p>
-      <a class="pdf" href="catalogo-sefia-2026.pdf" target="_blank" rel="noopener">
-        <svg class="i" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M12 18v-6"></path><path d="M9 15l3 3 3-3"></path></svg>
-        Ver catálogo SEFIA 2026 (PDF)
-      </a>
-      <p class="legal">Distribuidor oficial SEFIA en Uruguay. Envíos a todo el país.
-        Precios en dólares, sujetos a stock.</p>
+      <span class="mark">tu<em>v</em>aso</span>
+      <p>De lo descartable a lo sustentable ♻️<br>Vasos reutilizables personalizados — Uruguay.</p>
+      <div class="rows">
+        <a href="https://wa.me/59899284127" target="_blank" rel="noopener">
+          <svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg>099 284 127</a>
+        <a href="mailto:tuvasouy@gmail.com">
+          <svg class="i" aria-hidden="true"><use href="#ico-mail"></use></svg>tuvasouy@gmail.com</a>
+        <a href="https://www.instagram.com/tuvaso.uy/" target="_blank" rel="noopener">
+          <svg class="i" aria-hidden="true"><use href="#ico-ig"></use></svg>@tuvaso.uy</a>
+        <span><svg class="i" aria-hidden="true"><use href="#ico-pin"></use></svg>Uruguay — envíos a todo el país</span>
+      </div>
+      <p class="legal">Sitio de demostración. Textos, cifras y testimonios son de ejemplo y se
+        ajustan con el cliente antes de publicar.</p>
     </div>
   </div>
 </footer>
 
+<a class="fab" href="https://wa.me/59899284127?text=Hola%20Tuvaso%2C%20quiero%20cotizar%20vasos%20para%20mi%20evento"
+  target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">
+  <svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg></a>
 
-  <span class="fab" aria-label="Consultar por WhatsApp">
-    <svg class="i" aria-hidden="true"><use href="#ico-wa"></use></svg></span>
+<script>
+(function(){
+  /* ---- personalizador ---- */
+  var CX=160, BOT=352, WA='https://wa.me/59899284127?text=';
+
+  var SIZES={
+    '330'  :{top:150,bot:116,h:182,label:'Vaso 330 ml',short:'330 ml'},
+    '500'  :{top:158,bot:116,h:224,label:'Vaso 500 ml',short:'500 ml'},
+    '1000' :{top:186,bot:132,h:258,label:'Vaso 1 litro',short:'1 litro'},
+    'jarra':{top:178,bot:134,h:242,label:'Jarra 1 L',short:'Jarra 1 L',handle:true}
+  };
+  var FONTS={
+    moderna :{fam:"'Space Grotesk',system-ui,sans-serif",wt:700,label:'Moderna'},
+    elegante:{fam:"'Fraunces',Georgia,serif",wt:800,label:'Elegante'},
+    fuerte  :{fam:"'Archivo Black',system-ui,sans-serif",wt:400,label:'Fuerte'}
+  };
+  var CUPS=[['Azul noche','#2b2280'],['Lima','#d8f54e'],['Negro','#15131f'],['Blanco','#f2f3fb'],
+            ['Rojo','#e2382f'],['Verde','#2f9e5a'],['Celeste','#3f9fe0'],['Rosa','#e86fa8']];
+  var INKS=[['Lima','#d8f54e'],['Blanco','#ffffff'],['Negro','#15131f'],['Dorado','#e8c66a'],
+            ['Azul noche','#2b2280'],['Rojo','#e2382f']];
+  var PRESETS={
+    empresa    :{size:'500' ,cup:'#15131f',ink:'#d8f54e',font:'moderna' ,l1:'TU EMPRESA',l2:'FIN DE AÑO 2026',qty:300},
+    quince     :{size:'500' ,cup:'#e86fa8',ink:'#ffffff',font:'elegante',l1:'SOFÍA 15'  ,l2:'12 · 09 · 2026' ,qty:150},
+    boliche    :{size:'1000',cup:'#d8f54e',ink:'#2b2280',font:'fuerte'  ,l1:'LA PREVIA' ,l2:'MVD · VERANO'   ,qty:1000},
+    casamiento :{size:'330' ,cup:'#f2f3fb',ink:'#2b2280',font:'elegante',l1:'ANA & LUIS',l2:'NOS CASAMOS'    ,qty:200}
+  };
+
+  var $=function(id){return document.getElementById(id)};
+  var elBody=$('body'), elClip=$('clipBody'), elHandle=$('handle'), elDrop=$('floor'),
+      elRimO=$('rimOut'), elRimI=$('rimIn'), elRimH=$('rimHi'), elCyl=$('cyl'),
+      elP1=$('p1'), elP2=$('p2'), elT1=$('t1'), elT2=$('t2'), elTp1=$('tp1'), elTp2=$('tp2'),
+      elLogo=$('logoImg'), meas=$('meas'), elSvg=$('cup');
+
+  var st={size:'500',cup:'#2b2280',cupName:'Azul noche',ink:'#d8f54e',inkName:'Lima',
+          font:'moderna',l1:'TU MARCA',l2:'EVENTO 2026',qty:300,logo:null,logoName:'',logoScale:1};
+
+  function lum(hex){
+    var n=parseInt(hex.slice(1),16);
+    function ch(c){c/=255;return c<=.03928?c/12.92:Math.pow((c+.055)/1.055,2.4)}
+    return .2126*ch(n>>16&255)+.7152*ch(n>>8&255)+.0722*ch(n&255);
+  }
+  function contrast(a,b){var x=lum(a),y=lum(b);
+    return (Math.max(x,y)+.05)/(Math.min(x,y)+.05);}
+  /* si la tinta elegida no se vería sobre el vaso, la pasamos a blanco o negro */
+  function keepReadable(){
+    if(contrast(st.cup,st.ink)>=1.9)return false;
+    var dark=lum(st.cup)>.4;
+    st.ink=dark?'#15131f':'#ffffff'; st.inkName=dark?'Negro':'Blanco';
+    return true;
+  }
+  function shade(hex,p){
+    var n=parseInt(hex.slice(1),16),r=n>>16&255,g=n>>8&255,b=n&255;
+    function m(c){return Math.max(0,Math.min(255,Math.round(p<0?c*(1+p):c+(255-c)*p)))}
+    return '#'+((1<<24)+(m(r)<<16)+(m(g)<<8)+m(b)).toString(16).slice(1);
+  }
+  /* el reflejo del cilindro se atenúa en vasos claros para no marcar una banda dura */
+  function gradStops(){
+    var L=lum(st.cup), hi=L>.55?.4:(L>.3?.72:1), sh=L>.55?1.18:1;
+    return [[0,0,.46],[.08,0,.24],[.18,0,.07],[.3,1,.16],[.4,1,.24],[.5,1,.12],
+            [.62,0,.04],[.78,0,.18],[.9,0,.34],[1,0,.5]]
+      .map(function(t){return [t[0],t[1]?'#ffffff':'#000000',+(t[2]*(t[1]?hi:sh)).toFixed(3)];});
+  }
+  function paintGrad(){
+    var g=document.getElementById('cylGrad');
+    g.textContent='';
+    gradStops().forEach(function(t){
+      var e=document.createElementNS('http://www.w3.org/2000/svg','stop');
+      e.setAttribute('offset',t[0]); e.setAttribute('stop-color',t[1]);
+      e.setAttribute('stop-opacity',t[2]); g.appendChild(e);
+    });
+  }
+  function geom(){
+    var s=SIZES[st.size], topY=BOT-s.h, rT=s.top/2, rB=s.bot/2,
+        ryT=rT*0.185, ryB=rB*0.15;
+    var d='M'+(CX-rT)+' '+topY+'L'+(CX-rB)+' '+BOT+
+          'A'+rB+' '+ryB+' 0 0 0 '+(CX+rB)+' '+BOT+
+          'L'+(CX+rT)+' '+topY+
+          'A'+rT+' '+ryT+' 0 0 1 '+(CX-rT)+' '+topY+'Z';
+    return {s:s,topY:topY,rT:rT,rB:rB,ryT:ryT,ryB:ryB,d:d};
+  }
+  function widthAt(g,y){
+    var t=Math.max(0,Math.min(1,(y-g.topY)/g.s.h));
+    return (g.rT+(g.rB-g.rT)*t)*2;
+  }
+  function arc(g,y,frac){
+    var full=widthAt(g,y), w=full*frac, ry=(full/2)*0.185,
+        sag=ry*(1-Math.sqrt(Math.max(0,1-frac*frac)))*1.15;
+    return {d:'M'+(CX-w/2)+' '+y+'Q'+CX+' '+(y+sag*2)+' '+(CX+w/2)+' '+y,
+            w:w,p0:{x:CX-w/2,y:y},pc:{x:CX,y:y+sag*2},p2:{x:CX+w/2,y:y}};
+  }
+  function textWidth(t,fs,fam,wt,ls){
+    meas.setAttribute('font-size',fs);meas.setAttribute('font-family',fam);
+    meas.setAttribute('font-weight',wt);meas.setAttribute('letter-spacing',ls);
+    meas.textContent=t;
+    try{return meas.getComputedTextLength()}catch(e){return t.length*fs*0.6}
+  }
+  function fit(t,fs,fam,wt,ls,max){
+    var w=textWidth(t,fs,fam,wt,ls);
+    return w>max&&w>0?Math.max(8,fs*max/w):fs;
+  }
+
+  /* modelo geométrico común para SVG y canvas */
+  function model(){
+    var g=geom(), f=FONTS[st.font], k=g.rT/79;
+    var bt=g.topY+g.ryT+16, bb=BOT-44, bh=bb-bt;
+    var m={g:g,font:f,lines:[],logo:null};
+    var l1=st.l1.trim(), l2=st.l2.trim(), has=!!st.logo;
+    var y1,y2;
+    if(has){
+      var lh=bh*0.40*st.logoScale, lw=widthAt(g,bt+bh*0.30)*0.62*st.logoScale;
+      m.logo={w:lw,h:lh,x:CX-lw/2,y:bt+bh*0.30-lh/2};
+      y1=bt+bh*(l2?0.76:0.82); y2=y1+24*k;
+    }else{
+      y1=bt+bh*(l2?0.46:0.55); y2=y1+30*k;
+    }
+    if(l1){
+      var a1=arc(g,y1,0.80), fs1=fit(l1,34*k,f.fam,f.wt,0,a1.w*0.96);
+      m.lines.push({t:l1,fs:fs1,ls:0,arc:a1,fam:f.fam,wt:f.wt});
+    }
+    if(l2){
+      var a2=arc(g,y2,0.80), fs2=fit(l2,14*k,f.fam,st.font==='fuerte'?400:600,2.4*k,a2.w*0.94);
+      m.lines.push({t:l2,fs:fs2,ls:2.4*k,arc:a2,fam:f.fam,wt:st.font==='fuerte'?400:600});
+    }
+    return m;
+  }
+
+  function render(){
+    var m=model(), g=m.g;
+    elBody.setAttribute('d',g.d); elClip.setAttribute('d',g.d);
+    elBody.setAttribute('fill',st.cup); paintGrad();
+    elRimO.setAttribute('cy',g.topY); elRimO.setAttribute('rx',g.rT); elRimO.setAttribute('ry',g.ryT);
+    elRimO.setAttribute('fill',shade(st.cup,.2));
+    elRimI.setAttribute('cy',g.topY+1.5); elRimI.setAttribute('rx',g.rT-9);
+    elRimI.setAttribute('ry',Math.max(2,g.ryT-3.5)); elRimI.setAttribute('fill',shade(st.cup,-.55));
+    elRimH.setAttribute('cy',g.topY-1); elRimH.setAttribute('rx',g.rT-4);
+    elRimH.setAttribute('ry',Math.max(1.5,g.ryT-5));
+    elDrop.setAttribute('cy',BOT+9); elDrop.setAttribute('rx',g.rB*1.3);
+
+    if(g.s.handle){
+      var y1=g.topY+g.s.h*0.24, y2=g.topY+g.s.h*0.72;
+      elHandle.setAttribute('d','M'+(CX+g.rT-10)+' '+y1+'C'+(CX+g.rT+62)+' '+y1+','+
+        (CX+g.rT+58)+' '+y2+','+(CX+g.rB-4)+' '+y2);
+      elHandle.setAttribute('stroke',shade(st.cup,-.16));
+    }else{ elHandle.setAttribute('d',''); elHandle.setAttribute('stroke','none'); }
+
+    if(m.logo){
+      elLogo.setAttribute('href',st.logo.src); elLogo.setAttribute('x',m.logo.x);
+      elLogo.setAttribute('y',m.logo.y); elLogo.setAttribute('width',m.logo.w);
+      elLogo.setAttribute('height',m.logo.h); elLogo.style.display='';
+    }else{ elLogo.style.display='none'; }
+
+    [[elT1,elTp1,elP1,m.lines[0]],[elT2,elTp2,elP2,m.lines[1]]].forEach(function(r){
+      var t=r[0],tp=r[1],p=r[2],L=r[3];
+      if(!L){ tp.textContent=''; t.style.display='none'; return; }
+      t.style.display='';
+      p.setAttribute('d',L.arc.d);
+      t.setAttribute('font-family',L.fam); t.setAttribute('font-weight',L.wt);
+      t.setAttribute('font-size',L.fs); t.setAttribute('letter-spacing',L.ls);
+      t.setAttribute('fill',st.ink);
+      tp.textContent=L.t;
+    });
+    sync();
+  }
+
+  /* ---- controles ---- */
+  function swatches(host,list,key,nameKey){
+    list.forEach(function(c){
+      var b=document.createElement('button');
+      b.className='sw'; b.type='button'; b.style.background=c[1];
+      b.setAttribute('aria-label',c[0]); b.dataset.hex=c[1];
+      b.setAttribute('aria-pressed',String(st[key]===c[1]));
+      b.addEventListener('click',function(){
+        st[key]=c[1]; st[nameKey]=c[0];
+        if(key==='cup'&&keepReadable())marks($('inkColors'),'ink');
+        marks(host,key); render(); });
+      host.appendChild(b);
+    });
+    var w=document.createElement('button');
+    w.className='sw more'; w.type='button'; w.setAttribute('aria-label','Otro color');
+    w.innerHTML='<input type="color" value="'+st[key]+'" aria-label="Elegir otro color">';
+    var inp=w.querySelector('input');
+    inp.addEventListener('input',function(){
+      st[key]=inp.value; st[nameKey]=inp.value.toUpperCase();
+      if(key==='cup'&&keepReadable())marks($('inkColors'),'ink');
+      marks(host,key); render(); });
+    host.appendChild(w);
+  }
+  function marks(host,key){
+    [].forEach.call(host.querySelectorAll('.sw'),function(b){
+      b.setAttribute('aria-pressed',String(!b.classList.contains('more')&&b.dataset.hex===st[key]));
+    });
+  }
+  function group(host,attr,key,after){
+    [].forEach.call(host.querySelectorAll('.seg'),function(b){
+      b.addEventListener('click',function(){
+        st[key]=b.dataset[attr];
+        [].forEach.call(host.querySelectorAll('.seg'),function(o){
+          o.setAttribute('aria-pressed',String(o===b));});
+        if(after)after(); render();
+      });
+    });
+  }
+  function groupSync(host,attr,key){
+    [].forEach.call(host.querySelectorAll('.seg'),function(b){
+      b.setAttribute('aria-pressed',String(b.dataset[attr]===st[key]));});
+  }
+
+  swatches($('cupColors'),CUPS,'cup','cupName');
+  swatches($('inkColors'),INKS,'ink','inkName');
+  group($('sizes'),'size','size');
+  group($('fonts'),'font','font');
+
+  var i1=$('l1'), i2=$('l2');
+  i1.addEventListener('input',function(){ st.l1=i1.value.toUpperCase(); render(); });
+  i2.addEventListener('input',function(){ st.l2=i2.value.toUpperCase(); render(); });
+
+  /* logo */
+  var fileIn=$('logoFile'), dropBox=$('drop'), dName=$('dropName'), dHint=$('dropHint'),
+      logoRow=$('logoRow'), logoSize=$('logoSize');
+  function loadFile(f){
+    if(!f||!/^image\//.test(f.type))return;
+    if(f.size>5e6){ dHint.textContent='La imagen pesa más de 5 MB — probá con una más liviana'; return; }
+    var r=new FileReader();
+    r.onload=function(){
+      var img=new Image();
+      img.onload=function(){ st.logo=img; st.logoName=f.name;
+        dName.textContent=f.name; dHint.textContent='Listo — tocá para cambiarlo';
+        logoRow.hidden=false; render(); };
+      img.onerror=function(){ dHint.textContent='No pudimos leer esa imagen'; };
+      img.src=r.result;
+    };
+    r.readAsDataURL(f);
+  }
+  fileIn.addEventListener('change',function(){ loadFile(fileIn.files[0]); });
+  ['dragenter','dragover'].forEach(function(e){
+    dropBox.addEventListener(e,function(ev){ ev.preventDefault(); dropBox.classList.add('over'); });});
+  ['dragleave','drop'].forEach(function(e){
+    dropBox.addEventListener(e,function(ev){ ev.preventDefault(); dropBox.classList.remove('over'); });});
+  dropBox.addEventListener('drop',function(ev){
+    if(ev.dataTransfer&&ev.dataTransfer.files)loadFile(ev.dataTransfer.files[0]); });
+  logoSize.addEventListener('input',function(){ st.logoScale=+logoSize.value/100; render(); });
+  $('logoDel').addEventListener('click',function(ev){
+    ev.preventDefault(); st.logo=null; st.logoName=''; fileIn.value='';
+    dName.textContent='Subí tu logo';
+    dHint.textContent='PNG, JPG o SVG — se ve al instante sobre el vaso';
+    logoRow.hidden=true; render(); });
+
+  /* cantidad */
+  var qty=$('qty');
+  function setQty(n){ st.qty=Math.max(10,Math.min(20000,n||10)); qty.value=st.qty; sync(); }
+  qty.addEventListener('input',function(){ var n=parseInt(qty.value.replace(/\D/g,''),10);
+    st.qty=isNaN(n)?0:n; sync(); });
+  qty.addEventListener('blur',function(){ setQty(st.qty); });
+  $('qMinus').addEventListener('click',function(){ setQty(st.qty-50); });
+  $('qPlus').addEventListener('click',function(){ setQty(st.qty+50); });
+
+  /* presets */
+  [].forEach.call(document.querySelectorAll('.chip[data-preset]'),function(b){
+    b.addEventListener('click',function(){
+      var p=PRESETS[b.dataset.preset];
+      st.size=p.size; st.font=p.font; st.qty=p.qty;
+      st.cup=p.cup; st.cupName=(CUPS.filter(function(c){return c[1]===p.cup})[0]||['',''])[0]||p.cup;
+      st.ink=p.ink; st.inkName=(INKS.filter(function(c){return c[1]===p.ink})[0]||['',''])[0]||p.ink;
+      st.l1=p.l1; st.l2=p.l2; i1.value=p.l1; i2.value=p.l2; qty.value=p.qty;
+      marks($('cupColors'),'cup'); marks($('inkColors'),'ink');
+      groupSync($('sizes'),'size','size'); groupSync($('fonts'),'font','font');
+      render();
+      $('personalizar').scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+
+  /* resumen + WhatsApp */
+  var nf2=new Intl.NumberFormat('es-UY');
+  function sync(){
+    var s=SIZES[st.size];
+    $('capSize').textContent=s.short;
+    $('capPrint').textContent=st.logo?'Logo + texto':'Impresión 1 color';
+    $('sSize').textContent=s.label;
+    $('sCup').textContent=st.cupName;
+    $('sInk').textContent=st.inkName+' — '+FONTS[st.font].label.toLowerCase();
+    $('sArt').textContent=st.logo?('Logo'+(st.l1?' + "'+st.l1+'"':'')):(st.l1?'Texto: '+st.l1:'Sin texto');
+    $('sQty').textContent=nf2.format(st.qty)+' vasos';
+    var t='¡Hola Tuvaso! Diseñé mi vaso en la web:\n'+
+          '• Modelo: '+s.label+'\n'+
+          '• Color del vaso: '+st.cupName+'\n'+
+          '• Impresión: '+st.inkName+'\n'+
+          '• Tipografía: '+FONTS[st.font].label+'\n'+
+          (st.l1?'• Texto principal: '+st.l1+'\n':'')+
+          (st.l2?'• Segunda línea: '+st.l2+'\n':'')+
+          (st.logo?'• Logo: '+st.logoName+' (te lo adjunto)\n':'')+
+          '• Cantidad: '+nf2.format(st.qty)+' vasos\n\n'+
+          '¿Me pasan precio y plazo de entrega?';
+    $('waDesign').href=WA+encodeURIComponent(t);
+  }
+
+  /* ---- descarga de la maqueta (canvas) ---- */
+  function curved(ctx,L,S,ox,oy){
+    var a=L.arc,N=160,pts=[],acc=0,prev=qp(a,0);
+    for(var i=1;i<=N;i++){var p=qp(a,i/N);acc+=Math.hypot(p.x-prev.x,p.y-prev.y);
+      pts.push({t:i/N,l:acc});prev=p;}
+    var total=acc;
+    ctx.font=L.wt+' '+(L.fs*S)+'px '+L.fam;
+    ctx.textAlign='center'; ctx.textBaseline='alphabetic'; ctx.fillStyle=st.ink;
+    var chars=L.t.split(''),ws=chars.map(function(c){return ctx.measureText(c).width+L.ls*S;}),
+        tw=ws.reduce(function(a2,b2){return a2+b2},0)-L.ls*S,
+        at=(total*S-tw)/2;
+    chars.forEach(function(c,i){
+      var target=(at+ws[i]/2)/S, t=tAt(pts,target,total),
+          p=qp(a,t), ang=qa(a,t);
+      ctx.save();
+      ctx.translate(ox+p.x*S,oy+p.y*S);
+      ctx.rotate(ang);
+      ctx.fillText(c,0,0);
+      ctx.restore();
+      at+=ws[i];
+    });
+  }
+  function qp(a,t){var u=1-t;return{x:u*u*a.p0.x+2*u*t*a.pc.x+t*t*a.p2.x,
+                                    y:u*u*a.p0.y+2*u*t*a.pc.y+t*t*a.p2.y};}
+  function qa(a,t){var u=1-t;return Math.atan2(2*u*(a.pc.y-a.p0.y)+2*t*(a.p2.y-a.pc.y),
+                                               2*u*(a.pc.x-a.p0.x)+2*t*(a.p2.x-a.pc.x));}
+  function tAt(pts,len,total){
+    len=Math.max(0,Math.min(total,len));
+    for(var i=0;i<pts.length;i++){if(pts[i].l>=len)return pts[i].t;}
+    return 1;
+  }
+  function sheet(){
+    var S=2.6, TOP=52, W=Math.round(320*S), H=Math.round(400*S), m=model(), g=m.g;
+    var cv=document.createElement('canvas'); cv.width=W; cv.height=H;
+    var c=cv.getContext('2d');
+    c.fillStyle='#120d38'; c.fillRect(0,0,W,H);
+    var rg=c.createRadialGradient(W/2,H*0.32,10,W/2,H*0.32,W*0.7);
+    rg.addColorStop(0,'rgba(216,245,78,.14)'); rg.addColorStop(1,'rgba(216,245,78,0)');
+    c.fillStyle=rg; c.fillRect(0,0,W,H);
+
+    c.save(); c.scale(S,S); c.translate(0,-TOP);
+    c.globalAlpha=.4; c.fillStyle='#05030f';
+    c.beginPath(); c.ellipse(CX,BOT+9,g.rB*1.3,10,0,0,6.2832); c.fill(); c.globalAlpha=1;
+    if(g.s.handle){
+      var hy1=g.topY+g.s.h*0.24, hy2=g.topY+g.s.h*0.72;
+      c.strokeStyle=shade(st.cup,-.16); c.lineWidth=17; c.lineCap='round';
+      c.beginPath(); c.moveTo(CX+g.rT-10,hy1);
+      c.bezierCurveTo(CX+g.rT+62,hy1,CX+g.rT+58,hy2,CX+g.rB-4,hy2); c.stroke();
+    }
+    var bp=new Path2D(g.d);
+    c.fillStyle=st.cup; c.fill(bp);
+    c.save(); c.clip(bp);
+    if(m.logo&&st.logo){
+      var iw=st.logo.naturalWidth||m.logo.w, ih=st.logo.naturalHeight||m.logo.h,
+          r=Math.min(m.logo.w/iw,m.logo.h/ih), dw=iw*r, dh=ih*r;
+      try{c.drawImage(st.logo,CX-dw/2,m.logo.y+(m.logo.h-dh)/2,dw,dh);}catch(e){}
+    }
+    m.lines.forEach(function(L){ c.save(); c.scale(1/S,1/S); curved(c,L,S,0,0); c.restore(); });
+    var lg=c.createLinearGradient(CX-g.rT,0,CX+g.rT,0);
+    gradStops().forEach(function(t){
+      lg.addColorStop(t[0],(t[1]==='#ffffff'?'rgba(255,255,255,':'rgba(0,0,0,')+t[2]+')');});
+    c.fillStyle=lg; c.fillRect(0,0,320,400);
+    c.restore();
+    function ell(cy,rx,ry,fill,alpha){
+      c.globalAlpha=alpha==null?1:alpha; c.fillStyle=fill;
+      c.beginPath(); c.ellipse(CX,cy,Math.max(0,rx),Math.max(0,ry),0,0,6.2832); c.fill();
+      c.globalAlpha=1;
+    }
+    ell(g.topY,g.rT,g.ryT,shade(st.cup,.2));
+    ell(g.topY+1.5,g.rT-9,Math.max(2,g.ryT-3.5),shade(st.cup,-.55));
+    ell(g.topY-1,g.rT-4,Math.max(1.5,g.ryT-5),'#ffffff',.1);
+    c.restore();
+
+    c.textAlign='center';
+    c.fillStyle='#d8f54e'; c.font='700 '+(15*S)+'px '+FONTS.moderna.fam;
+    c.fillText('TUVASO', W/2, 336*S);
+    c.fillStyle='rgba(242,243,251,.6)'; c.font='500 '+(11*S)+'px Inter,sans-serif';
+    c.fillText(SIZES[st.size].label+' · '+st.cupName+' · impresión '+st.inkName, W/2, 358*S);
+    c.fillText(nf2.format(st.qty)+' unidades · maqueta orientativa · tuvaso.uy', W/2, 378*S);
+    return cv;
+  }
+  $('dlBtn').addEventListener('click',function(){
+    var btn=this, old=btn.innerHTML;
+    function go(){
+      try{
+        var cv=sheet(), a=document.createElement('a');
+        a.download='maqueta-tuvaso-'+(st.l1||'vaso').toLowerCase().replace(/[^a-z0-9]+/g,'-')+'.png';
+        a.href=cv.toDataURL('image/png'); a.click();
+      }catch(e){ alert('No pudimos generar la imagen en este navegador.'); }
+      btn.innerHTML=old; btn.disabled=false;
+    }
+    btn.disabled=true; btn.textContent='Generando…';
+    if(document.fonts&&document.fonts.ready){document.fonts.ready.then(go).catch(go);}else{setTimeout(go,60);}
+  });
+
+  render();
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(render).catch(function(){});}
 
 
+  /* ---- calculadora ---- */
+  var g=document.getElementById('guests'),h=document.getElementById('hours'),
+      vg=document.getElementById('vGuests'),vh=document.getElementById('vHours'),
+      oc=document.getElementById('oCups'),oa=document.getElementById('oAvoid'),
+      ok=document.getElementById('oKg'),ol=document.getElementById('oLife'),
+      nf=new Intl.NumberFormat('es-UY');
+
+  function calc(){
+    var guests=+g.value,hours=+h.value;
+    var cups=Math.ceil(guests*1.1/10)*10;
+    var avoided=guests*hours+Math.round(guests*0.1*hours);
+    var kg=avoided*0.005;
+    vg.textContent=nf.format(guests);
+    vh.textContent=hours+' h';
+    oc.textContent=nf.format(cups);
+    oa.textContent=nf.format(avoided);
+    ok.textContent=(kg<10?kg.toFixed(1):Math.round(kg))+' kg';
+    ol.textContent=nf.format(cups*200);
+  }
+  g.addEventListener('input',calc);
+  h.addEventListener('input',calc);
+  calc();
+})();
+</script>
 </body>
 </html>
